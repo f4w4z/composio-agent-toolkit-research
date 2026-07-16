@@ -105,12 +105,22 @@ The repo ships a `vercel.json` + `api/index.js` serverless entry that reuses the
 Express app. On Vercel the pre-generated `data/*.json` is served read-only, so the page
 renders immediately with no job run.
 
-1. Import this repo in Vercel.
-2. Add env vars in the Vercel dashboard: `COMPOSIO_API_KEY`, `OPENROUTER_API_KEY`
-   (used if you later run jobs; the page itself needs neither to display).
-3. Deploy. The site is served at `https://<project>.vercel.app`.
-4. On Vercel the "Re-run research / Re-run verification" buttons are marked **local only**
-   (Vercel has no long-lived process for multi-minute jobs). Run those locally with `npm start`.
+#### Deploy with the Vercel CLI (no GitHub connection needed)
+The CLI deploys straight from local files, so it works even when the GitHub integration is down.
+
+```bash
+npm i -g vercel
+vercel login                 # browser login; or: vercel login --token <VERCEL_TOKEN>
+cd composio-toolkit-research
+vercel --prod                # accept defaults; it reads vercel.json automatically
+# set env vars (only needed if you later run jobs; the page renders without them):
+vercel env add COMPOSIO_API_KEY
+vercel env add OPENROUTER_API_KEY
+vercel --prod                # redeploy after adding env vars
+```
+
+On Vercel the "Re-run research / Re-run verification" buttons are marked **local only**
+(Vercel has no long-lived process for multi-minute jobs). Run those locally with `npm start`.
 
 ### Local / long-lived host (full functionality)
 - **Render / Railway / Fly / Vultr**: point at `npm start`; expose `PORT`. All buttons work,
