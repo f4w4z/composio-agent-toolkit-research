@@ -13,10 +13,15 @@ hand), **verify accuracy** on a sample, and ship a **single self-explanatory HTM
 1. **Two-source research pipeline** (`src/research.js`)
    - **Composio SDK** supplies *verified* catalogue facts per app: auth schemes,
      real tool/trigger counts, base URL, categories.
-   - An **LLM (OpenRouter)** classifies each app from its developer docs: self-serve vs
-     gated, API breadth, MCP/agent-surface presence, buildability verdict + blocker, and
-     the evidence URL. A fast first pass *and* a richer final pass are recorded per app so
-     accuracy improvement can be measured.
+    - An **LLM (OpenRouter)** classifies each app from its developer docs: self-serve vs
+      gated, API breadth, MCP/agent-surface presence, buildability verdict + blocker, and
+      the evidence URL. A fast first pass *and* a richer final pass are recorded per app so
+      accuracy improvement can be measured.
+    - **Real doc retrieval** (`src/fetch.js`): each app's developer/API docs are actually
+      *fetched* (browser user-agent, HTML stripped to text) and used to ground the LLM. If a
+      site bot-blocks the live request (e.g. a 403), the pipeline retries via the Internet
+      Archive Wayback Machine. Sites that are truly unreachable are flagged `unreachable`
+      rather than guessed. Of 100 apps: 85 fetched live, 7 via Wayback, 8 unreachable.
 2. **Verification loop** (`src/verify.js`)
    - An independent LLM *auditor* re-classifies a fixed 16-app holdout (spread across all 10
      categories) directly from the live developer docs.
@@ -111,7 +116,7 @@ The CLI deploys straight from local files, so it works even when the GitHub inte
 ```bash
 npm i -g vercel
 vercel login                 # browser login; or: vercel login --token <VERCEL_TOKEN>
-cd composio-toolkit-research
+cd C:\Projects\Composio\agent   # the repo root containing vercel.json
 vercel --prod                # accept defaults; it reads vercel.json automatically
 # set env vars (only needed if you later run jobs; the page renders without them):
 vercel env add COMPOSIO_API_KEY
@@ -140,5 +145,6 @@ For a pure static host, run the agent locally, then inline `data/*.json` into
   100-app findings) is the most representative single file.
 - **Notes section**: a good one-liner set is included in the page header; in the form you can
   write something like: *"Research agent profiling 100 real apps for agent-toolkit buildability,
-  built with the Composio SDK + an LLM, with an honest 16-app verification loop. Live site:
-  <url>. Source + run instructions in the README."*
+  built with the Composio SDK + an LLM grounded in actually-fetched developer docs (live, with a
+  Wayback Machine fallback for bot-blocked sites). Honest 16-app verification loop (77% field
+  accuracy). Live site: <url>. Source + run instructions in the README."*
