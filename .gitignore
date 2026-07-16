@@ -1,0 +1,9 @@
+node_modules
+.env
+*.log
+*.err
+run.log
+server.log
+verif.log
+.DS_Store
+

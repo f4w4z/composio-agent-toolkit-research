@@ -1,0 +1,1300 @@
+{
+  "total": 100,
+  "authCount": {
+    "OAuth2": 62,
+    "APIKey": 60,
+    "BearerToken": 13,
+    "Other": 15,
+    "Basic": 5
+  },
+  "selfServe": {
+    "self-serve": 76,
+    "gated": 24
+  },
+  "verdict": {
+    "buildable": 76,
+    "partial": 17,
+    "blocked": 7
+  },
+  "blockers": {
+    "Partner / contact-sales gate": 9,
+    "No public / undocumented API": 7,
+    "Production access gated by Meta business verification and ap": 1,
+    "App review gating and limited API scope (no full social mana": 1,
+    "No MCP / agent surface yet": 3,
+    "Paid plan required for API": 2,
+    "No official hosted API or auth; would require wrapping the o": 1
+  },
+  "composioCount": 48,
+  "docSources": {
+    "live": 85,
+    "unreachable": 8,
+    "wayback": 7
+  },
+  "byGroup": {
+    "CRM & Sales": {
+      "total": 10,
+      "self-serve": 9,
+      "gated": 1,
+      "buildable": 9,
+      "partial": 1,
+      "blocked": 0,
+      "apps": [
+        {
+          "name": "Salesforce",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "HubSpot",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Pipedrive",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Attio",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Twenty",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Podio",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Zoho CRM",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Close",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Copper",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "DealCloud",
+          "selfServe": "gated",
+          "verdict": "partial",
+          "blocker": "No self-serve API credentials; requires enterprise account and instance-specific provisioning"
+        }
+      ]
+    },
+    "Support & Helpdesk": {
+      "total": 10,
+      "self-serve": 8,
+      "gated": 2,
+      "buildable": 8,
+      "partial": 1,
+      "blocked": 1,
+      "apps": [
+        {
+          "name": "Zendesk",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Intercom",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Freshdesk",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Front",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Pylon",
+          "selfServe": "gated",
+          "verdict": "blocked",
+          "blocker": "No publicly documented self-serve API or auth mechanism; API access appears gated and undocumented."
+        },
+        {
+          "name": "LiveAgent",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Plain",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Help Scout",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Gorgias",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Gladly",
+          "selfServe": "gated",
+          "verdict": "partial",
+          "blocker": "No self-serve developer account or public sandbox; API access gated behind enterprise contract."
+        }
+      ]
+    },
+    "Comms & Messaging": {
+      "total": 10,
+      "self-serve": 9,
+      "gated": 1,
+      "buildable": 10,
+      "partial": 0,
+      "blocked": 0,
+      "apps": [
+        {
+          "name": "Slack",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Twilio",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Zoho Cliq",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Lark (Larksuite)",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Pumble",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Discord",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Telegram",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "WhatsApp Business",
+          "selfServe": "gated",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Aircall",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Vonage",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        }
+      ]
+    },
+    "Marketing & Social": {
+      "total": 10,
+      "self-serve": 4,
+      "gated": 6,
+      "buildable": 5,
+      "partial": 4,
+      "blocked": 1,
+      "apps": [
+        {
+          "name": "Google Ads",
+          "selfServe": "gated",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Meta Ads",
+          "selfServe": "gated",
+          "verdict": "partial",
+          "blocker": "Production access gated by Meta business verification and app review; sandbox/test access only self-serve"
+        },
+        {
+          "name": "LinkedIn Ads",
+          "selfServe": "gated",
+          "verdict": "partial",
+          "blocker": "Access gated by LinkedIn partner/app approval process despite documented OAuth2 REST API"
+        },
+        {
+          "name": "GoHighLevel",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Mailchimp",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Klaviyo",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "systeme.io",
+          "selfServe": "gated",
+          "verdict": "blocked",
+          "blocker": "No publicly documented or self-serve accessible API; integration would require undocumented/internal endpoints or partner approval."
+        },
+        {
+          "name": "Pinterest",
+          "selfServe": "gated",
+          "verdict": "partial",
+          "blocker": "App review/approval gating for production API credentials slows fully self-serve agent-toolkit onboarding"
+        },
+        {
+          "name": "Threads (Meta)",
+          "selfServe": "gated",
+          "verdict": "partial",
+          "blocker": "App review gating and limited API scope (no full social management surface)"
+        },
+        {
+          "name": "SendGrid",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        }
+      ]
+    },
+    "Ecommerce": {
+      "total": 10,
+      "self-serve": 6,
+      "gated": 4,
+      "buildable": 6,
+      "partial": 3,
+      "blocked": 1,
+      "apps": [
+        {
+          "name": "Shopify",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "WooCommerce",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "BigCommerce",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Salesforce Commerce Cloud",
+          "selfServe": "gated",
+          "verdict": "partial",
+          "blocker": "Tenant/license gating and credential provisioning inside Business Manager make fully self-serve agent toolkit onboarding impossible without customer-owned instance."
+        },
+        {
+          "name": "Magento (Adobe Commerce)",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Squarespace",
+          "selfServe": "gated",
+          "verdict": "partial",
+          "blocker": "Commerce API access gated to specific plans and requires manual enablement; OAuth app registration not fully self-serve for all scopes"
+        },
+        {
+          "name": "Ecwid",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Gumroad",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Amazon Selling Partner",
+          "selfServe": "gated",
+          "verdict": "partial",
+          "blocker": "App registration and credential approval are gated by Amazon; cannot be fully self-serve built without approved developer profile and seller authorization, though API itself is usable post-approval."
+        },
+        {
+          "name": "fanbasis",
+          "selfServe": "gated",
+          "verdict": "blocked",
+          "blocker": "No public API documentation or self-serve developer access; API appears gated or unexposed."
+        }
+      ]
+    },
+    "Data, SEO & Scraping": {
+      "total": 10,
+      "self-serve": 7,
+      "gated": 3,
+      "buildable": 6,
+      "partial": 3,
+      "blocked": 1,
+      "apps": [
+        {
+          "name": "DataForSEO",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "SE Ranking",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Ahrefs",
+          "selfServe": "gated",
+          "verdict": "partial",
+          "blocker": "Paid gated API access and per-credit pricing limits agent toolkit usability without customer subscription"
+        },
+        {
+          "name": "MrScraper",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Apify",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Firecrawl",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Bright Data",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Sherlock",
+          "selfServe": "self-serve",
+          "verdict": "partial",
+          "blocker": "No official hosted API or auth; would require wrapping the open-source CLI/library as a local tool rather than a standard SaaS API integration."
+        },
+        {
+          "name": "Waterfall.io",
+          "selfServe": "gated",
+          "verdict": "blocked",
+          "blocker": "No publicly documented self-serve API or developer access; API surface unknown and likely gated behind enterprise contracts."
+        },
+        {
+          "name": "Clay",
+          "selfServe": "gated",
+          "verdict": "partial",
+          "blocker": "API access and account creation are gated behind sales/demo, limiting autonomous agent toolkit onboarding"
+        }
+      ]
+    },
+    "Dev, Infra & Data": {
+      "total": 10,
+      "self-serve": 10,
+      "gated": 0,
+      "buildable": 10,
+      "partial": 0,
+      "blocked": 0,
+      "apps": [
+        {
+          "name": "GitHub",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Vercel",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Netlify",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Cloudflare",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Supabase",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Neo4j",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Snowflake",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "MongoDB Atlas",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Datadog",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Sentry",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        }
+      ]
+    },
+    "Productivity & PM": {
+      "total": 10,
+      "self-serve": 10,
+      "gated": 0,
+      "buildable": 10,
+      "partial": 0,
+      "blocked": 0,
+      "apps": [
+        {
+          "name": "Notion",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Airtable",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Linear",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Jira",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Asana",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Monday.com",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "ClickUp",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Coda",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Smartsheet",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Harvest",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        }
+      ]
+    },
+    "Finance & Fintech": {
+      "total": 10,
+      "self-serve": 7,
+      "gated": 3,
+      "buildable": 7,
+      "partial": 2,
+      "blocked": 1,
+      "apps": [
+        {
+          "name": "Stripe",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Plaid",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Binance",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Paygent Connect",
+          "selfServe": "gated",
+          "verdict": "partial",
+          "blocker": "API access requires approved merchant contract; no public self-serve API documentation or sandbox openly available"
+        },
+        {
+          "name": "iPayX",
+          "selfServe": "gated",
+          "verdict": "partial",
+          "blocker": "Gated access to credentials and unclear self-serve onboarding may slow toolkit build without a partner account."
+        },
+        {
+          "name": "QuickBooks",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Xero",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Brex",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Ramp",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "PitchBook",
+          "selfServe": "gated",
+          "verdict": "blocked",
+          "blocker": "No public self-serve API or developer program; API access is gated behind enterprise sales and licensing agreements."
+        }
+      ]
+    },
+    "AI, Research & Media": {
+      "total": 10,
+      "self-serve": 6,
+      "gated": 4,
+      "buildable": 5,
+      "partial": 3,
+      "blocked": 2,
+      "apps": [
+        {
+          "name": "NotebookLM",
+          "selfServe": "gated",
+          "verdict": "blocked",
+          "blocker": "No public API or developer program for NotebookLM; cannot build agent toolkit without undocumented/internal access."
+        },
+        {
+          "name": "Otter AI",
+          "selfServe": "gated",
+          "verdict": "partial",
+          "blocker": "No publicly documented self-serve API; official API access is gated and undocumented for general developers"
+        },
+        {
+          "name": "Fathom",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Consensus",
+          "selfServe": "gated",
+          "verdict": "blocked",
+          "blocker": "No publicly documented or self-serve API available to build agent tools against."
+        },
+        {
+          "name": "Reducto",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Devin",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "higgsfield",
+          "selfServe": "gated",
+          "verdict": "partial",
+          "blocker": "No documented public REST/GraphQL API; only CLI docs, auth and programmatic access details unclear."
+        },
+        {
+          "name": "Mermaid CLI",
+          "selfServe": "self-serve",
+          "verdict": "partial",
+          "blocker": "No remote API or auth; would need a wrapper service or local execution bridge to expose as an agent tool."
+        },
+        {
+          "name": "YouTube Transcript",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        },
+        {
+          "name": "Grain",
+          "selfServe": "self-serve",
+          "verdict": "buildable",
+          "blocker": "none"
+        }
+      ]
+    }
+  },
+  "easyWins": [
+    {
+      "id": 1,
+      "name": "Salesforce",
+      "group": "CRM & Sales"
+    },
+    {
+      "id": 2,
+      "name": "HubSpot",
+      "group": "CRM & Sales"
+    },
+    {
+      "id": 3,
+      "name": "Pipedrive",
+      "group": "CRM & Sales"
+    },
+    {
+      "id": 4,
+      "name": "Attio",
+      "group": "CRM & Sales"
+    },
+    {
+      "id": 5,
+      "name": "Twenty",
+      "group": "CRM & Sales"
+    },
+    {
+      "id": 6,
+      "name": "Podio",
+      "group": "CRM & Sales"
+    },
+    {
+      "id": 7,
+      "name": "Zoho CRM",
+      "group": "CRM & Sales"
+    },
+    {
+      "id": 8,
+      "name": "Close",
+      "group": "CRM & Sales"
+    },
+    {
+      "id": 9,
+      "name": "Copper",
+      "group": "CRM & Sales"
+    },
+    {
+      "id": 11,
+      "name": "Zendesk",
+      "group": "Support & Helpdesk"
+    },
+    {
+      "id": 12,
+      "name": "Intercom",
+      "group": "Support & Helpdesk"
+    },
+    {
+      "id": 13,
+      "name": "Freshdesk",
+      "group": "Support & Helpdesk"
+    },
+    {
+      "id": 14,
+      "name": "Front",
+      "group": "Support & Helpdesk"
+    },
+    {
+      "id": 16,
+      "name": "LiveAgent",
+      "group": "Support & Helpdesk"
+    },
+    {
+      "id": 17,
+      "name": "Plain",
+      "group": "Support & Helpdesk"
+    },
+    {
+      "id": 18,
+      "name": "Help Scout",
+      "group": "Support & Helpdesk"
+    },
+    {
+      "id": 19,
+      "name": "Gorgias",
+      "group": "Support & Helpdesk"
+    },
+    {
+      "id": 21,
+      "name": "Slack",
+      "group": "Comms & Messaging"
+    },
+    {
+      "id": 22,
+      "name": "Twilio",
+      "group": "Comms & Messaging"
+    },
+    {
+      "id": 23,
+      "name": "Zoho Cliq",
+      "group": "Comms & Messaging"
+    },
+    {
+      "id": 24,
+      "name": "Lark (Larksuite)",
+      "group": "Comms & Messaging"
+    },
+    {
+      "id": 25,
+      "name": "Pumble",
+      "group": "Comms & Messaging"
+    },
+    {
+      "id": 26,
+      "name": "Discord",
+      "group": "Comms & Messaging"
+    },
+    {
+      "id": 27,
+      "name": "Telegram",
+      "group": "Comms & Messaging"
+    },
+    {
+      "id": 29,
+      "name": "Aircall",
+      "group": "Comms & Messaging"
+    },
+    {
+      "id": 30,
+      "name": "Vonage",
+      "group": "Comms & Messaging"
+    },
+    {
+      "id": 34,
+      "name": "GoHighLevel",
+      "group": "Marketing & Social"
+    },
+    {
+      "id": 35,
+      "name": "Mailchimp",
+      "group": "Marketing & Social"
+    },
+    {
+      "id": 36,
+      "name": "Klaviyo",
+      "group": "Marketing & Social"
+    },
+    {
+      "id": 40,
+      "name": "SendGrid",
+      "group": "Marketing & Social"
+    },
+    {
+      "id": 41,
+      "name": "Shopify",
+      "group": "Ecommerce"
+    },
+    {
+      "id": 42,
+      "name": "WooCommerce",
+      "group": "Ecommerce"
+    },
+    {
+      "id": 43,
+      "name": "BigCommerce",
+      "group": "Ecommerce"
+    },
+    {
+      "id": 45,
+      "name": "Magento (Adobe Commerce)",
+      "group": "Ecommerce"
+    },
+    {
+      "id": 47,
+      "name": "Ecwid",
+      "group": "Ecommerce"
+    },
+    {
+      "id": 48,
+      "name": "Gumroad",
+      "group": "Ecommerce"
+    },
+    {
+      "id": 51,
+      "name": "DataForSEO",
+      "group": "Data, SEO & Scraping"
+    },
+    {
+      "id": 52,
+      "name": "SE Ranking",
+      "group": "Data, SEO & Scraping"
+    },
+    {
+      "id": 54,
+      "name": "MrScraper",
+      "group": "Data, SEO & Scraping"
+    },
+    {
+      "id": 55,
+      "name": "Apify",
+      "group": "Data, SEO & Scraping"
+    },
+    {
+      "id": 56,
+      "name": "Firecrawl",
+      "group": "Data, SEO & Scraping"
+    },
+    {
+      "id": 57,
+      "name": "Bright Data",
+      "group": "Data, SEO & Scraping"
+    },
+    {
+      "id": 61,
+      "name": "GitHub",
+      "group": "Dev, Infra & Data"
+    },
+    {
+      "id": 62,
+      "name": "Vercel",
+      "group": "Dev, Infra & Data"
+    },
+    {
+      "id": 63,
+      "name": "Netlify",
+      "group": "Dev, Infra & Data"
+    },
+    {
+      "id": 64,
+      "name": "Cloudflare",
+      "group": "Dev, Infra & Data"
+    },
+    {
+      "id": 65,
+      "name": "Supabase",
+      "group": "Dev, Infra & Data"
+    },
+    {
+      "id": 66,
+      "name": "Neo4j",
+      "group": "Dev, Infra & Data"
+    },
+    {
+      "id": 67,
+      "name": "Snowflake",
+      "group": "Dev, Infra & Data"
+    },
+    {
+      "id": 68,
+      "name": "MongoDB Atlas",
+      "group": "Dev, Infra & Data"
+    },
+    {
+      "id": 69,
+      "name": "Datadog",
+      "group": "Dev, Infra & Data"
+    },
+    {
+      "id": 70,
+      "name": "Sentry",
+      "group": "Dev, Infra & Data"
+    },
+    {
+      "id": 71,
+      "name": "Notion",
+      "group": "Productivity & PM"
+    },
+    {
+      "id": 72,
+      "name": "Airtable",
+      "group": "Productivity & PM"
+    },
+    {
+      "id": 73,
+      "name": "Linear",
+      "group": "Productivity & PM"
+    },
+    {
+      "id": 74,
+      "name": "Jira",
+      "group": "Productivity & PM"
+    },
+    {
+      "id": 75,
+      "name": "Asana",
+      "group": "Productivity & PM"
+    },
+    {
+      "id": 76,
+      "name": "Monday.com",
+      "group": "Productivity & PM"
+    },
+    {
+      "id": 77,
+      "name": "ClickUp",
+      "group": "Productivity & PM"
+    },
+    {
+      "id": 78,
+      "name": "Coda",
+      "group": "Productivity & PM"
+    },
+    {
+      "id": 79,
+      "name": "Smartsheet",
+      "group": "Productivity & PM"
+    },
+    {
+      "id": 80,
+      "name": "Harvest",
+      "group": "Productivity & PM"
+    },
+    {
+      "id": 81,
+      "name": "Stripe",
+      "group": "Finance & Fintech"
+    },
+    {
+      "id": 82,
+      "name": "Plaid",
+      "group": "Finance & Fintech"
+    },
+    {
+      "id": 83,
+      "name": "Binance",
+      "group": "Finance & Fintech"
+    },
+    {
+      "id": 86,
+      "name": "QuickBooks",
+      "group": "Finance & Fintech"
+    },
+    {
+      "id": 87,
+      "name": "Xero",
+      "group": "Finance & Fintech"
+    },
+    {
+      "id": 88,
+      "name": "Brex",
+      "group": "Finance & Fintech"
+    },
+    {
+      "id": 89,
+      "name": "Ramp",
+      "group": "Finance & Fintech"
+    },
+    {
+      "id": 93,
+      "name": "Fathom",
+      "group": "AI, Research & Media"
+    },
+    {
+      "id": 95,
+      "name": "Reducto",
+      "group": "AI, Research & Media"
+    },
+    {
+      "id": 96,
+      "name": "Devin",
+      "group": "AI, Research & Media"
+    },
+    {
+      "id": 99,
+      "name": "YouTube Transcript",
+      "group": "AI, Research & Media"
+    },
+    {
+      "id": 100,
+      "name": "Grain",
+      "group": "AI, Research & Media"
+    }
+  ],
+  "needsOutreach": [
+    {
+      "id": 10,
+      "name": "DealCloud",
+      "group": "CRM & Sales",
+      "verdict": "partial",
+      "blocker": "No self-serve API credentials; requires enterprise account and instance-specific provisioning"
+    },
+    {
+      "id": 15,
+      "name": "Pylon",
+      "group": "Support & Helpdesk",
+      "verdict": "blocked",
+      "blocker": "No publicly documented self-serve API or auth mechanism; API access appears gated and undocumented."
+    },
+    {
+      "id": 20,
+      "name": "Gladly",
+      "group": "Support & Helpdesk",
+      "verdict": "partial",
+      "blocker": "No self-serve developer account or public sandbox; API access gated behind enterprise contract."
+    },
+    {
+      "id": 28,
+      "name": "WhatsApp Business",
+      "group": "Comms & Messaging",
+      "verdict": "buildable",
+      "blocker": "none"
+    },
+    {
+      "id": 31,
+      "name": "Google Ads",
+      "group": "Marketing & Social",
+      "verdict": "buildable",
+      "blocker": "none"
+    },
+    {
+      "id": 32,
+      "name": "Meta Ads",
+      "group": "Marketing & Social",
+      "verdict": "partial",
+      "blocker": "Production access gated by Meta business verification and app review; sandbox/test access only self-serve"
+    },
+    {
+      "id": 33,
+      "name": "LinkedIn Ads",
+      "group": "Marketing & Social",
+      "verdict": "partial",
+      "blocker": "Access gated by LinkedIn partner/app approval process despite documented OAuth2 REST API"
+    },
+    {
+      "id": 37,
+      "name": "systeme.io",
+      "group": "Marketing & Social",
+      "verdict": "blocked",
+      "blocker": "No publicly documented or self-serve accessible API; integration would require undocumented/internal endpoints or partner approval."
+    },
+    {
+      "id": 38,
+      "name": "Pinterest",
+      "group": "Marketing & Social",
+      "verdict": "partial",
+      "blocker": "App review/approval gating for production API credentials slows fully self-serve agent-toolkit onboarding"
+    },
+    {
+      "id": 39,
+      "name": "Threads (Meta)",
+      "group": "Marketing & Social",
+      "verdict": "partial",
+      "blocker": "App review gating and limited API scope (no full social management surface)"
+    },
+    {
+      "id": 44,
+      "name": "Salesforce Commerce Cloud",
+      "group": "Ecommerce",
+      "verdict": "partial",
+      "blocker": "Tenant/license gating and credential provisioning inside Business Manager make fully self-serve agent toolkit onboarding impossible without customer-owned instance."
+    },
+    {
+      "id": 46,
+      "name": "Squarespace",
+      "group": "Ecommerce",
+      "verdict": "partial",
+      "blocker": "Commerce API access gated to specific plans and requires manual enablement; OAuth app registration not fully self-serve for all scopes"
+    },
+    {
+      "id": 49,
+      "name": "Amazon Selling Partner",
+      "group": "Ecommerce",
+      "verdict": "partial",
+      "blocker": "App registration and credential approval are gated by Amazon; cannot be fully self-serve built without approved developer profile and seller authorization, though API itself is usable post-approval."
+    },
+    {
+      "id": 50,
+      "name": "fanbasis",
+      "group": "Ecommerce",
+      "verdict": "blocked",
+      "blocker": "No public API documentation or self-serve developer access; API appears gated or unexposed."
+    },
+    {
+      "id": 53,
+      "name": "Ahrefs",
+      "group": "Data, SEO & Scraping",
+      "verdict": "partial",
+      "blocker": "Paid gated API access and per-credit pricing limits agent toolkit usability without customer subscription"
+    },
+    {
+      "id": 59,
+      "name": "Waterfall.io",
+      "group": "Data, SEO & Scraping",
+      "verdict": "blocked",
+      "blocker": "No publicly documented self-serve API or developer access; API surface unknown and likely gated behind enterprise contracts."
+    },
+    {
+      "id": 60,
+      "name": "Clay",
+      "group": "Data, SEO & Scraping",
+      "verdict": "partial",
+      "blocker": "API access and account creation are gated behind sales/demo, limiting autonomous agent toolkit onboarding"
+    },
+    {
+      "id": 84,
+      "name": "Paygent Connect",
+      "group": "Finance & Fintech",
+      "verdict": "partial",
+      "blocker": "API access requires approved merchant contract; no public self-serve API documentation or sandbox openly available"
+    },
+    {
+      "id": 85,
+      "name": "iPayX",
+      "group": "Finance & Fintech",
+      "verdict": "partial",
+      "blocker": "Gated access to credentials and unclear self-serve onboarding may slow toolkit build without a partner account."
+    },
+    {
+      "id": 90,
+      "name": "PitchBook",
+      "group": "Finance & Fintech",
+      "verdict": "blocked",
+      "blocker": "No public self-serve API or developer program; API access is gated behind enterprise sales and licensing agreements."
+    },
+    {
+      "id": 91,
+      "name": "NotebookLM",
+      "group": "AI, Research & Media",
+      "verdict": "blocked",
+      "blocker": "No public API or developer program for NotebookLM; cannot build agent toolkit without undocumented/internal access."
+    },
+    {
+      "id": 92,
+      "name": "Otter AI",
+      "group": "AI, Research & Media",
+      "verdict": "partial",
+      "blocker": "No publicly documented self-serve API; official API access is gated and undocumented for general developers"
+    },
+    {
+      "id": 94,
+      "name": "Consensus",
+      "group": "AI, Research & Media",
+      "verdict": "blocked",
+      "blocker": "No publicly documented or self-serve API available to build agent tools against."
+    },
+    {
+      "id": 97,
+      "name": "higgsfield",
+      "group": "AI, Research & Media",
+      "verdict": "partial",
+      "blocker": "No documented public REST/GraphQL API; only CLI docs, auth and programmatic access details unclear."
+    }
+  ],
+  "insights": [
+    {
+      "title": "OAuth2 dominates auth",
+      "detail": "62 of 100 apps expose OAuth2 as a primary auth method, with API keys the main fallback (60). Basic auth is rare (5). This means managed OAuth is the highest-leverage capability for a toolkit platform."
+    },
+    {
+      "title": "Most apps are self-serve",
+      "detail": "76 of 100 apps let a developer get credentials themselves (free or trial); 24 are gated behind a paid plan, admin approval, or contact-sales. The gated cluster is concentrated in enterprise/fintech categories."
+    },
+    {
+      "title": "Buildability is high but rarely zero-effort",
+      "detail": "76 buildable today, 17 partial (need a connector but the API exists), 7 blocked. The most common blocker is \"Partner / contact-sales gate\"."
+    },
+    {
+      "title": "Composio already covers the bulk of demand",
+      "detail": "48 of 100 apps already have a Composio toolkit with genuine tool/trigger counts. The long tail (open-source CLI tools, niche fintech, media-native AI apps) is where new build work lives."
+    },
+    {
+      "title": "Easy wins vs outreach",
+      "detail": "74 apps are immediate easy wins (self-serve + buildable). 24 need partnership/outreach or have a real blocker. Prioritize the former for fast toolkit parity."
+    }
+  ]
+}

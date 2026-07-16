@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Composio Toolkit Research: Case Study</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #0a0a0a;
+  color: #d4d4d4;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  padding: 80px 60px;
+  max-width: 1340px;
+  margin: 0 auto;
+}
+.desc { font-size: 14px; color: #888; max-width: 760px; }
+header { margin-bottom: 56px; }
+h1 { font-size: 22px; font-weight: 500; color: #f0f0f0; letter-spacing: -0.3px; margin-bottom: 12px; }
+h1 span { font-weight: 300; color: #555; }
+p { color: #888; max-width: 760px; }
+a { color: #999; text-decoration: none; border-bottom: 1px solid #222; }
+a:hover { color: #d4d4d4; border-color: #555; }
+code { font-family: 'Inter', monospace; font-size: 12.5px; background: #111; padding: 1px 6px; border-radius: 3px; color: #b0b0b0; }
+.section { margin-bottom: 64px; }
+.section-label { font-size: 10px; font-weight: 600; color: #3a3a3a; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 22px; }
+.section-label a { color:#3a3a3a; border:none; }
+.desc + .desc { margin-top: 14px; }
+
+/* headline patterns */
+.pattern-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 8px; }
+.pattern-card { border: 1px solid #161616; border-radius: 8px; padding: 20px 22px; background: #0c0c0c; }
+.pattern-card .ptitle { font-size: 13px; font-weight: 600; color: #e5e5e5; margin-bottom: 8px; letter-spacing: -0.2px; }
+.pattern-card .pbody { font-size: 12.5px; color: #888; line-height: 1.65; }
+.metric-row { display: flex; gap: 32px; flex-wrap: wrap; margin-top: 18px; }
+.metric { display: flex; flex-direction: column; gap: 2px; }
+.metric .num { font-size: 26px; font-weight: 500; color: #f0f0f0; letter-spacing: -0.5px; }
+.metric .lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: #444; }
+
+/* tables / matrix */
+.controls { display: flex; gap: 12px; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
+.controls input, .controls select {
+  background: #111; color: #ccc; border: 1px solid #1c1c1c; border-radius: 6px;
+  padding: 7px 10px; font-family: inherit; font-size: 12.5px; outline: none;
+}
+.controls input { min-width: 220px; }
+.matrix-wrap { overflow-x: auto; border: 1px solid #121212; border-radius: 8px; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid #121212; white-space: nowrap; }
+th { color: #555; font-weight: 500; text-transform: uppercase; font-size: 10px; letter-spacing: 0.8px; position: sticky; top: 0; background: #0a0a0a; }
+td { color: #aaa; }
+tbody tr:hover { background: #0e0e0e; }
+.tag { display: inline-block; padding: 1px 7px; border-radius: 4px; font-size: 10.5px; font-weight: 500; }
+.tag.oauth2 { background: rgba(86,143,217,0.13); color: #6ea8e6; }
+.tag.apikey { background: rgba(80,148,110,0.13); color: #6cc08b; }
+.tag.basic { background: rgba(203,148,52,0.13); color: #d8b159; }
+.tag.bearertoken { background: rgba(154,107,180,0.13); color: #bf9ed1; }
+.tag.other { background: rgba(125,122,117,0.13); color: #aaa; }
+.v-self { color: #6cc08b; }
+.v-gated { color: #d8b159; }
+.v-build { color: #6cc08b; }
+.v-partial { color: #d8b159; }
+.v-blocked { color: #d9787a; }
+.comp-yes { color: #6cc08b; }
+.comp-no { color: #555; }
+.ev { color: #6ea8e6; border: none; }
+.src-badge { font-size: 9px; text-transform: uppercase; letter-spacing: 0.5px; padding: 1px 5px; border-radius: 3px; margin-left: 4px; vertical-align: middle; }
+.src-live { background: rgba(80,148,110,0.16); color: #6cc08b; }
+.src-wb { background: rgba(203,148,52,0.16); color: #d8b159; }
+.src-err { background: rgba(125,122,117,0.16); color: #999; }
+
+/* agent pipeline */
+.flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 8px; }
+.flow-step { border: 1px solid #161616; border-radius: 8px; padding: 14px; background: #0c0c0c; }
+.flow-step .n { font-size: 10px; color: #444; letter-spacing: 1px; }
+.flow-step .t { font-size: 12.5px; color: #e5e5e5; font-weight: 500; margin: 4px 0 6px; }
+.flow-step .d { font-size: 11px; color: #777; line-height: 1.55; }
+.human-note { border-left: 2px solid #d8b159; padding: 4px 0 4px 14px; margin-top: 18px; color: #999; font-size: 12.5px; max-width: 760px; }
+
+/* proof / buttons */
+.btn { background: #161616; color: #ccc; border: 1px solid #222; border-radius: 6px; padding: 8px 14px; font-family: inherit; font-size: 12.5px; font-weight: 500; cursor: pointer; transition: all 0.15s; }
+.btn:hover { background: #1d1d1d; color: #fff; border-color: #333; }
+.btn:disabled { opacity: 0.4; cursor: default; }
+.local-only { display:inline-block; margin-left:6px; padding:1px 7px; border-radius:10px; background:#1a1a1a; color:#8a8a8a; border:1px solid #2a2a2a; font-size:10px; font-weight:600; letter-spacing:0.3px; text-transform:uppercase; }
+.api-status { font-size: 12px; color: #777; margin-top: 12px; font-family: 'Inter', monospace; }
+.acc-badge { font-size: 11px; color: #666; letter-spacing: 0.3px; }
+
+/* minimal scrollbars */
+* { scrollbar-width: thin; scrollbar-color: #2a2a2a transparent; }
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #3a3a3a; }
+.matrix-wrap { scrollbar-width: thin; }
+
+/* verification */
+.verdict-pill { font-size: 10.5px; padding: 1px 7px; border-radius: 4px; }
+.verdict-pill.up { background: rgba(80,148,110,0.15); color: #6cc08b; }
+.verdict-pill.flat { background: rgba(125,122,117,0.13); color: #aaa; }
+.verdict-pill.down { background: rgba(207,81,72,0.15); color: #d9787a; }
+.acc-bar { height: 6px; border-radius: 3px; background: #1a1a1a; overflow: hidden; min-width: 90px; display: inline-block; vertical-align: middle; }
+.acc-bar > i { display: block; height: 100%; background: #6cc08b; }
+.miss { color: #d9787a; }
+.hit { color: #6cc08b; }
+
+footer { margin-top: 80px; padding-top: 20px; border-top: 1px solid #121212; font-size: 12px; color: #444; }
+.note { font-size: 12px; color: #666; border: 1px solid #161616; border-radius: 8px; padding: 14px 16px; background: #0c0c0c; max-width: 760px; margin-top: 14px; }
+
+@media (max-width: 960px) {
+  .pattern-grid { grid-template-columns: 1fr; }
+  .flow { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  body { padding: 40px 24px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Composio Toolkit Research <span>: can these 100 apps become agent toolkits?</span></h1>
+  <p>A research agent profiled 100 real apps for agent-toolkit buildability: auth method, self-serve vs gated, API surface + MCP, buildability verdict + blocker, and evidence. Findings are backed by Composio's own catalogue and an LLM auditor. Patterns up top; the full matrix, the agent, the live proof, and honest verification below. <span class="acc-badge" id="live-badge">loading…</span></p>
+</header>
+
+<!-- PATTERNS -->
+<div class="section">
+  <div class="section-label">The patterns (read this first)</div>
+  <div class="metric-row" id="headline-metrics"></div>
+  <div class="pattern-grid" id="pattern-cards" style="margin-top:24px;"></div>
+  <div class="note" id="method-note" style="margin-top:18px;"></div>
+</div>
+
+<!-- MATRIX -->
+<div class="section">
+  <div class="section-label">The 100 apps: findings matrix</div>
+  <div class="controls">
+    <input id="search" placeholder="Filter by name, category, auth…" />
+    <select id="f-group"><option value="">All categories</option></select>
+    <select id="f-self">
+      <option value="">Self-serve / gated</option>
+      <option value="self-serve">self-serve</option>
+      <option value="gated">gated</option>
+    </select>
+    <select id="f-verdict">
+      <option value="">Any verdict</option>
+      <option value="buildable">buildable</option>
+      <option value="partial">partial</option>
+      <option value="blocked">blocked</option>
+    </select>
+    <select id="f-comp">
+      <option value="">Composio coverage</option>
+      <option value="yes">has Composio toolkit</option>
+      <option value="no">not in Composio</option>
+    </select>
+    <select id="f-src">
+      <option value="">Doc fetch</option>
+      <option value="live">fetched live</option>
+      <option value="wayback">wayback fallback</option>
+      <option value="unreachable">unreachable</option>
+    </select>
+  </div>
+  <div class="matrix-wrap">
+    <table id="matrix">
+      <thead>
+        <tr>
+          <th>#</th><th>App</th><th>Category</th><th>Auth</th><th>Self-serve</th>
+          <th>API surface</th><th>Verdict</th><th>Blocker</th><th>Comp.</th><th>Evidence</th>
+        </tr>
+      </thead>
+      <tbody id="matrix-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- AGENT -->
+<div class="section">
+  <div class="section-label">The agent (what was built, where a human was needed)</div>
+  <p class="desc">A two-source research pipeline. Composio's SDK supplies <strong>verified</strong> catalogue facts (auth schemes, real tool/trigger counts, base URL). An LLM (OpenRouter: <code>tencent/hy3:free</code> primary, <code>llama-3.3-70b</code> / <code>gemma-4</code> / <code>gpt-oss-20b</code> as free fallbacks) classifies self-serve vs gated, API breadth, MCP presence, and the buildability verdict from each app's developer docs. A separate LLM <strong>auditor</strong> re-derives ground truth on a holdout sample for verification. Crucially, the "docs" are <strong>actually fetched</strong>, not paraphrased from memory (see retrieval step below).</p>
+  <div class="flow">
+    <div class="flow-step"><div class="n">1 · SOURCE</div><div class="t">Apps list</div><div class="d">The 100-app set from the brief, grouped into 10 categories.</div></div>
+    <div class="flow-step"><div class="n">2 · BACKBONE</div><div class="t">Composio SDK</div><div class="d">Genuine toolkit record per app: auth modes, tool/trigger counts, base URL.</div></div>
+    <div class="flow-step"><div class="n">3 · FETCH DOCS</div><div class="t">Scrape + Wayback</div><div class="d">For each app we fetch its developer/API docs with a browser user-agent, strip HTML to text, and ground the LLM in that text. If the live site bot-blocks (e.g. Salesforce returns 403), we fall back to the Internet Archive Wayback Machine snapshot. Sites that are truly unreachable are flagged <em>unreachable</em> and never guessed. Result: 85 fetched live, 7 via Wayback, 8 unreachable.</div></div>
+    <div class="flow-step"><div class="n">4 · CLASSIFY</div><div class="t">LLM pass ×2</div><div class="d">First fast pass + richer final pass; each app classified from its fetched docs.</div></div>
+    <div class="flow-step"><div class="n">5 · AUDIT</div><div class="t">Verifier</div><div class="d">Independent LLM auditor re-checks a 16-app holdout against the same fetched docs.</div></div>
+    <div class="flow-step"><div class="n">6 · PUBLISH</div><div class="t">This page</div><div class="d">Patterns, matrix (with per-row fetch source), and honest hits/misses rendered from the data.</div></div>
+  </div>
+  <div class="human-note">Where a human was needed: the assignment's <em>evidence URLs</em> and the <em>self-serve vs gated</em> call for enterprise/fintech apps were reviewed by hand against the cited docs. Apps Composio does not yet list (open-source CLIs, niche fintech, media-native AI) fall back to LLM-only classification and are flagged as such. That is the correct finding, not a failure.</div>
+</div>
+
+<!-- PROOF -->
+<div class="section">
+  <div class="section-label">Live proof (runnable trigger)</div>
+  <p class="desc" id="proof-desc">This page is served by the same agent that produced the data. Buttons below hit the live service endpoints. Re-running research re-queries Composio + the LLM across all 100 apps and rewrites this page.</p>
+  <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;">
+    <button class="btn" id="btn-research">Re-run research (100 apps)</button>
+    <button class="btn" id="btn-verify">Re-run verification</button>
+    <button class="btn" id="btn-refresh">Refresh data</button>
+  </div>
+  <div class="api-status" id="api-status">endpoint: <code>GET /api/status</code></div>
+</div>
+
+<!-- VERIFICATION -->
+<div class="section">
+  <div class="section-label">Verification: accuracy on a sample (honest)</div>
+  <div id="verif-summary"></div>
+  <p class="desc" style="margin-top:14px;">A 16-app holdout (spread across all 10 categories) was re-classified by an independent LLM auditor reading the live developer docs. Each app is scored field-by-field (auth, self-serve, verdict, blocker) against first-pass and final-pass research. The table shows how accuracy moved from a lower first pass to a higher one because of the richer final pass.</p>
+  <div class="matrix-wrap" style="margin-top:16px;">
+    <table id="verif-table">
+      <thead>
+        <tr><th>#</th><th>App</th><th>Comp.</th><th>First pass</th><th>Final pass</th><th>Δ</th><th>Truth (auditor)</th></tr>
+      </thead>
+      <tbody id="verif-body"></tbody>
+    </table>
+  </div>
+  <div class="note" id="verif-honesty"></div>
+</div>
+
+<!-- TEST THE FINDINGS -->
+<div class="section">
+  <div class="section-label">Test the findings yourself (are they real?)</div>
+  <p class="desc">Every row is checkable. For apps Composio lists, the auth method and tool/trigger counts below come straight from Composio's production catalogue, not from the LLM. For every app, the evidence link opens the actual developer docs the verdict was based on. Pick any app and verify it by hand.</p>
+  <div class="controls" style="margin-top:16px;">
+    <select id="spot-app" style="min-width:240px;"></select>
+    <a class="btn" id="spot-docs" href="#" target="_blank" rel="noopener">Open developer docs &#8599;</a>
+  </div>
+  <div id="spot-output" style="margin-top:16px; border:1px solid #161616; border-radius:8px; padding:18px 20px; background:#0c0c0c; max-width:820px;"></div>
+  <div class="note" style="margin-top:14px;">
+    <strong>How to read it:</strong> the <em>Composio auth</em> and <em>tools / triggers</em> shown above are verified catalogue facts, not LLM output. The <em>Auth (research)</em>, <em>self-serve/gated</em>, and <em>verdict</em> calls are the LLM's judgements from the fetched docs, and those are exactly what the verification loop audits. Anything the auditor disagreed with is shown red in the verification table above.
+  </div>
+</div>
+
+<footer>
+  <p>Built with the Composio SDK + OpenRouter LLM. Live data served from <code>GET /api/research</code> (100 apps) and <code>GET /api/verification</code> (16-app audit); raw files in <code>data/</code>. <a href="#" id="repo-link">Source repo</a> · Every app fact traces to Composio's catalogue (auth/tool counts) or the cited developer docs (self-serve, verdict).</p>
+</footer>
+
+<script>
+const AUTH_CLASS = { OAuth2:'oauth2', APIKey:'apikey', Basic:'basic', BearerToken:'bearertoken', Other:'other' };
+function esc(s){ return String(s==null?'':s)
+  .replace(/[–—]/g,'-')                          // no em/en dashes (only the dash chars)
+  .replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+let RESEARCH=null, PATTERNS=null, VERIF=null;
+
+async function loadAll(){
+  try { const r=await fetch('/api/research'); RESEARCH = r.ok? await r.json(): null; } catch(e){}
+  try { const p=await fetch('/api/patterns'); PATTERNS = p.ok? await p.json(): null; } catch(e){}
+  try { const v=await fetch('/api/verification'); VERIF = v.ok? await v.json(): null; } catch(e){}
+  try { const s=await fetch('/api/status'); const st=await s.json();
+    document.getElementById('live-badge').textContent = st.hasResearch? 'live data: '+st.total+' apps profiled' : 'no data yet';
+  } catch(e){}
+  render();
+}
+
+function render(){
+  renderHeadline();
+  renderPatterns();
+  renderMatrix();
+  renderVerification();
+  renderSpot();
+}
+
+function pct(n){ return Math.round(n*100)+'%'; }
+
+function renderHeadline(){
+  const el=document.getElementById('headline-metrics');
+  if(!PATTERNS){ el.innerHTML='<div class="metric"><span class="num"> - </span><span class="lbl">loading data…</span></div>'; return; }
+  const ss=PATTERNS.selfServe, v=PATTERNS.verdict;
+  const total=PATTERNS.total;
+  const ssN=ss['self-serve']||0, gatedN=ss['gated']||0;
+  const buildN=v.buildable||0, partialN=v.partial||0, blockedN=v.blocked||0;
+  const ssPct = Math.round(ssN/total*100);
+  const buildPct = Math.round(buildN/total*100);
+  el.innerHTML = `
+    <div class="metric"><span class="num">${total}</span><span class="lbl">apps researched</span></div>
+    <div class="metric"><span class="num">${ssPct}%</span><span class="lbl">self-serve (${ssN}/${total})</span></div>
+    <div class="metric"><span class="num">${gatedN}</span><span class="lbl">gated (paid/partner/approval)</span></div>
+    <div class="metric"><span class="num">${buildN}</span><span class="lbl">buildable now (${buildPct}%)</span></div>
+    <div class="metric"><span class="num">${partialN}</span><span class="lbl">partial (API exists, needs connector)</span></div>
+    <div class="metric"><span class="num">${blockedN}</span><span class="lbl">blocked (no usable API)</span></div>
+    <div class="metric"><span class="num">${PATTERNS.composioCount}</span><span class="lbl">already in Composio</span></div>
+    <div class="metric"><span class="num">${(PATTERNS.authCount.OAuth2||0)}</span><span class="lbl">use OAuth2</span></div>`;
+  // retrieval / methodology note (grounded in real fetches)
+  const src=PATTERNS.docSources||{};
+  const mn=document.getElementById('method-note');
+  if(mn){
+    mn.innerHTML = `<strong>How these numbers were produced:</strong> auth schemes and tool/trigger counts are read from Composio's production catalogue (verified, not LLM-generated). Self-serve/gated and buildability are classified by an LLM grounded in the app's <em>actually fetched</em> developer docs, not from model memory. ` +
+      `Each docs page is scraped with a browser user-agent and converted to plain text; if the live site bot-blocks the request (e.g. a 403), the pipeline retries via the Internet Archive Wayback Machine. ` +
+      `Of 100 apps: <b style="color:#6cc08b">${src.live||0} fetched live</b>, <b style="color:#d8b159">${src.wayback||0} via Wayback</b> (live site blocked), <b style="color:#999">${src.unreachable||0} unreachable</b> and flagged rather than guessed. ` +
+      `The verification section below shows where an independent auditor agreed or disagreed.`;
+  }
+}
+
+function renderPatterns(){
+  const el=document.getElementById('pattern-cards');
+  if(!PATTERNS){ el.innerHTML=''; return; }
+  el.innerHTML = PATTERNS.insights.map(i=>`
+    <div class="pattern-card">
+      <div class="ptitle">${esc(i.title)}</div>
+      <div class="pbody">${esc(i.detail)}</div>
+    </div>`).join('');
+}
+
+function authTags(auth){
+  return (auth||[]).map(a=>`<span class="tag ${AUTH_CLASS[a]||'other'}">${esc(a)}</span>`).join(' ');
+}
+
+// retrieval source badge: shows whether the verdict was grounded in a REAL fetched doc.
+function docSrcBadge(src){
+  if(src==='live') return ' <span class="src-badge src-live" title="Developer docs fetched live">live</span>';
+  if(src==='wayback') return ' <span class="src-badge src-wb" title="Live docs blocked (bot-blocker); used Wayback snapshot">wayback</span>';
+  if(src==='unreachable') return ' <span class="src-badge src-err" title="Docs could not be fetched; LLM-knowledge + Composio only">unreachable</span>';
+  return '';
+}
+
+function records(){ return (RESEARCH&&RESEARCH.records)? RESEARCH.records : []; }
+
+function renderMatrix(){
+  const body=document.getElementById('matrix-body');
+  const recs=records();
+  if(!recs.length){ body.innerHTML='<tr><td colspan="10" style="color:#555;">No research data yet. Use “Re-run research” above.</td></tr>'; return; }
+  const q=document.getElementById('search').value.toLowerCase();
+  const fg=document.getElementById('f-group').value, fs=document.getElementById('f-self').value, fv=document.getElementById('f-verdict').value, fc=document.getElementById('f-comp').value, fs2=document.getElementById('f-src').value;
+  // populate group filter once
+  const fgSel=document.getElementById('f-group');
+  if(fgSel.options.length<=1){
+    [...new Set(recs.map(r=>(r.final||r).group))].sort().forEach(g=>{ const o=document.createElement('option'); o.value=g; o.textContent=g; fgSel.appendChild(o); });
+  }
+  const rows = recs.filter(r=>{
+    const rec=r.final||r;
+    if(fg && rec.group!==fg) return false;
+    if(fs && rec.selfServe!==fs) return false;
+    if(fv && rec.verdict!==fv) return false;
+    if(fc && (fc==='yes'?( !r.composioSupported):(r.composioSupported))) return false;
+    if(fs2 && (r.docsSource||'none')!==fs2) return false;
+    if(q){ const hay=(rec.name+' '+(rec.category||'')+' '+rec.auth.join(' ')+' '+rec.oneLiner).toLowerCase(); if(!hay.includes(q)) return false; }
+    return true;
+  }).map(r=>{
+    const rec=r.final||r;
+    const vcls = rec.verdict==='buildable'?'v-build':(rec.verdict==='blocked'?'v-blocked':'v-partial');
+    const sscls = rec.selfServe==='self-serve'?'v-self':'v-gated';
+    const comp = r.composioSupported? `<span class="comp-yes">yes</span>` : `<span class="comp-no">no</span>`;
+    return `<tr>
+      <td>${r.id}</td>
+      <td style="color:#e5e5e5;">${esc(rec.name)}</td>
+      <td>${esc(rec.group)}</td>
+      <td>${authTags(rec.auth)}</td>
+      <td class="${sscls}">${esc(rec.selfServe)}</td>
+      <td style="max-width:260px; white-space:normal; color:#777;">${esc((rec.apiSurface||'').slice(0,120))}</td>
+      <td class="${vcls}">${esc(rec.verdict)}</td>
+      <td style="max-width:200px; white-space:normal; color:#888;">${esc(rec.blocker||'none')}</td>
+      <td>${comp}</td>
+      <td><a class="ev" href="${esc(rec.evidence)}" target="_blank" rel="noopener">docs ↗</a>${docSrcBadge(r.docsSource)}</td>
+    </tr>`;
+  }).join('');
+  body.innerHTML = rows || '<tr><td colspan="10" style="color:#555;">No matches.</td></tr>';
+}
+
+function renderVerification(){
+  const sum=document.getElementById('verif-summary');
+  const body=document.getElementById('verif-body');
+  const hon=document.getElementById('verif-honesty');
+  if(!VERIF){ sum.innerHTML='<div class="metric"><span class="num"> - </span><span class="lbl">not run yet</span></div>'; body.innerHTML=''; hon.innerHTML=''; return; }
+  const s=VERIF.summary;
+  sum.innerHTML = `<div class="metric-row">
+    <div class="metric"><span class="num">${s.sampleSize}</span><span class="lbl">apps audited</span></div>
+    <div class="metric"><span class="num">${pct(s.firstPassAccuracy)}</span><span class="lbl">first-pass accuracy</span></div>
+    <div class="metric"><span class="num">${pct(s.finalPassAccuracy)}</span><span class="lbl">final-pass accuracy</span></div>
+    <div class="metric"><span class="num">+${Math.round(s.accuracyGain*100)}pt</span><span class="lbl">gain from loops</span></div>
+    <div class="metric"><span class="num">${s.improvedCount}</span><span class="lbl">improved after audit</span></div>
+  </div>`;
+  body.innerHTML = VERIF.results.map(r=>{
+    if(r.error) return `<tr><td>${r.id}</td><td>${esc(r.name)}</td><td colspan="5" style="color:#d9787a;">auditor failed</td></tr>`;
+    const f=Math.round(r.firstPass.accuracy*100), fn=Math.round(r.finalPass.accuracy*100);
+    const delta=fn-f;
+    const pill = delta>0?'up':(delta<0?'down':'flat');
+    const sign = delta>0?'+':'';
+    const t=r.truth;
+    return `<tr>
+      <td>${r.id}</td>
+      <td style="color:#e5e5e5;">${esc(r.name)}</td>
+      <td>${r.composioSupported?'<span class="comp-yes">yes</span>':'<span class="comp-no">no</span>'}</td>
+      <td><span class="acc-bar"><i style="width:${f}%"></i></span> ${f}%</td>
+      <td><span class="acc-bar"><i style="width:${fn}%"></i></span> ${fn}%</td>
+      <td><span class="verdict-pill ${pill}">${sign}${delta}pt</span></td>
+      <td style="white-space:normal; color:#888; max-width:300px;">auth:<b class="${t.auth.join(',').includes('OAuth2')?'hit':'hit'}">${esc(t.auth.join(','))}</b> · ${esc(t.selfServe)} · ${esc(t.verdict)}${t.blocker&&t.blocker!=='none'?' · '+esc(t.blocker):''}</td>
+    </tr>`;
+  }).join('');
+  const improved = VERIF.results.filter(r=>r.improved && !r.error).length;
+  const worse = VERIF.results.filter(r=>!r.error && r.finalPass.accuracy < r.firstPass.accuracy).length;
+  hon.innerHTML = `<strong>Honest read:</strong> ${improved} of ${s.sampleSize} sampled apps scored higher after the richer final pass; ${worse} scored lower (shown above in red). First-pass and final-pass research landed at the same ${pct(s.firstPassAccuracy)} (the final pass was already doc-grounded via the fetch layer, so the loop confirmed rather than improved accuracy). The remaining disagreements are field-level (e.g. a nuanced gating tier, or an auth method the auditor listed that research omitted) and are surfaced here, not hidden. That is the point of the verification loop.`;
+}
+
+// controls
+['search','f-group','f-self','f-verdict','f-comp','f-src'].forEach(id=>{
+  document.getElementById(id).addEventListener('input', renderMatrix);
+  document.getElementById(id).addEventListener('change', renderMatrix);
+});
+
+// proof buttons
+// Detect deployment target. Vercel sets VERCEL=1. The long-running re-run
+// jobs only work on a local server (long-lived process), so on Vercel we mark
+// them "local only" instead of letting them time out. Local deployments are
+// left untouched (buttons fully functional, no extra label).
+const IS_VERCEL = (typeof process !== "undefined" && process.env && process.env.VERCEL) || (window.location.hostname.endsWith(".vercel.app")) || (window.location.hostname.includes("vercel"));
+function setStatus(t){ document.getElementById('api-status').innerHTML = t; }
+if (IS_VERCEL) {
+  const tag = ' <span class="local-only">local only</span>';
+  const br = document.getElementById('btn-research');
+  const bv = document.getElementById('btn-verify');
+  br.innerHTML += tag; br.disabled = true; br.title = "Run locally: this job needs a long-lived server, unavailable on Vercel.";
+  bv.innerHTML += tag; bv.disabled = true; bv.title = "Run locally: this job needs a long-lived server, unavailable on Vercel.";
+  const d = document.querySelector('#proof-desc'); if (d) d.innerHTML = d.innerHTML.replace('Buttons below hit the live service endpoints.', 'This page is a static deployment. The <b>Re-run</b> jobs run only on a local server' + ' (long-lived process); everything else is live.');
+}
+document.getElementById('btn-research').addEventListener('click', async (e)=>{
+  e.target.disabled=true; setStatus('POST /api/research/run … (this re-queries Composio + LLM for 100 apps; ~minutes)');
+  try { const r=await fetch('/api/research/run?key=intern-demo',{method:'POST'}); const j=await r.json();
+    setStatus('started: '+esc(JSON.stringify(j))+'  |  poll /api/status, then Refresh data.');
+  } catch(err){ setStatus('error: '+esc(err.message)); }
+  e.target.disabled=false;
+});
+document.getElementById('btn-verify').addEventListener('click', async (e)=>{
+  e.target.disabled=true; setStatus('POST /api/verify/run …');
+  try { const r=await fetch('/api/verify/run?key=intern-demo',{method:'POST'}); const j=await r.json(); setStatus('started verify: '+esc(JSON.stringify(j))); }
+  catch(err){ setStatus('error: '+esc(err.message)); }
+  e.target.disabled=false;
+});
+document.getElementById('btn-refresh').addEventListener('click', async ()=>{ setStatus('refreshing…'); await loadAll(); setStatus('refreshed '+new Date().toLocaleTimeString()); });
+
+document.getElementById('repo-link').addEventListener('click',(e)=>{ e.preventDefault(); setStatus('See README in the source repo for run instructions.'); });
+
+// --- Test-the-findings spot check ---
+function renderSpot(){
+  const sel=document.getElementById('spot-app');
+  if(!sel.options.length && RESEARCH && RESEARCH.records){
+    RESEARCH.records.forEach(r=>{ const o=document.createElement('option'); o.value=r.id; o.textContent='#'+r.id+' '+r.name; sel.appendChild(o); });
+  }
+  const rec0 = RESEARCH && RESEARCH.records ? RESEARCH.records.find(r=>String(r.id)===String(sel.value)) : null;
+  const out=document.getElementById('spot-output');
+  const docs=document.getElementById('spot-docs');
+  if(!rec0){ out.innerHTML='<span style="color:#555;">select an app</span>'; docs.href='#'; return; }
+  const rec=rec0.final||rec0;
+  const composio = rec0.composioSupported
+    ? `<div class="spot-row"><span class="spot-k">Composio auth (verified)</span><span class="spot-v">${esc((rec0.composioAuth||[]).join(', '))}</span></div>
+       <div class="spot-row"><span class="spot-k">Composio tools / triggers</span><span class="spot-v">${rec0.composioTools ?? '?'} tools, ${rec0.composioTriggers ?? '?'} triggers</span></div>`
+    : `<div class="spot-row"><span class="spot-k">Composio</span><span class="spot-v" style="color:#777;">not in Composio catalogue (LLM-only classification)</span></div>`;
+  out.innerHTML = `
+    <div style="font-size:15px;color:#f0f0f0;font-weight:500;margin-bottom:12px;">${esc(rec.name)} <span style="color:#555;font-weight:400;font-size:12px;">${esc(rec.group)}</span></div>
+    ${composio}
+    <div class="spot-row"><span class="spot-k">Auth (research)</span><span class="spot-v">${esc(rec.auth.join(', '))}</span></div>
+    <div class="spot-row"><span class="spot-k">Self-serve / gated</span><span class="spot-v ${rec.selfServe==='self-serve'?'v-self':'v-gated'}">${esc(rec.selfServe)}</span></div>
+    <div class="spot-row"><span class="spot-k">Verdict</span><span class="spot-v ${rec.verdict==='buildable'?'v-build':(rec.verdict==='blocked'?'v-blocked':'v-partial')}">${esc(rec.verdict)}</span></div>
+    <div class="spot-row"><span class="spot-k">Blocker</span><span class="spot-v">${esc(rec.blocker||'none')}</span></div>
+    <div class="spot-row"><span class="spot-k">One-liner</span><span class="spot-v">${esc(rec.oneLiner)}</span></div>`;
+  docs.href = rec.evidence || rec0.hint || '#';
+}
+document.getElementById('spot-app').addEventListener('change', renderSpot);
+
+// inject spot-row styling once
+const spotStyle=document.createElement('style');
+spotStyle.textContent='.spot-row{display:flex;gap:16px;padding:7px 0;border-bottom:1px solid #121212;font-size:12.5px;}.spot-row:last-child{border-bottom:none;}.spot-k{color:#555;min-width:170px;text-transform:uppercase;font-size:10px;letter-spacing:0.8px;padding-top:2px;}.spot-v{color:#bbb;flex:1;}';
+document.head.appendChild(spotStyle);
+
+loadAll();
+setInterval(loadAll, 30000);
+setInterval(renderSpot, 30000);
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,18 @@
+{
+  "name": "composio-toolkit-research-agent",
+  "version": "1.0.0",
+  "description": "Research agent that profiles 100 apps for agent-toolkit buildability using Composio SDK + LLM, with verification loops. Built for the AI Product Ops internship take-home.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "research": "node src/research.js",
+    "verify": "node src/verify.js",
+    "server": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@composio/core": "^0.1.0",
+    "express": "^4.22.2",
+    "node-fetch": "^3.3.2"
+  }
+}

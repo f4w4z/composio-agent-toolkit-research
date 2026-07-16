@@ -1,0 +1,1871 @@
+{
+  "generatedAt": "2026-07-16T23:09:39.301Z",
+  "summary": {
+    "sampleSize": 16,
+    "firstPassAccuracy": 0.765625,
+    "finalPassAccuracy": 0.765625,
+    "accuracyGain": 0,
+    "improvedCount": 3,
+    "composioCoverageInSample": 9
+  },
+  "results": [
+    {
+      "id": 1,
+      "name": "Salesforce",
+      "group": "CRM & Sales",
+      "truth": {
+        "oneLiner": "Salesforce REST API provides programmatic access to Salesforce org data and metadata for CRUD operations, queries, and business logic invocation.",
+        "auth": [
+          "OAuth2"
+        ],
+        "selfServe": "self-serve",
+        "verdict": "buildable",
+        "blocker": "",
+        "evidence": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_rest.htm"
+      },
+      "firstPass": {
+        "correct": 4,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": true
+        },
+        "accuracy": 1,
+        "record": {
+          "id": 1,
+          "name": "Salesforce",
+          "group": "CRM & Sales",
+          "hint": "https://www.salesforce.com/",
+          "oneLiner": "Cloud-based CRM platform for sales, service, and marketing automation.",
+          "category": "CRM & Sales",
+          "auth": [
+            "OAuth2"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "self-serve",
+          "selfServeNote": "Developer editions and free trials can be self-signed up; connected apps for OAuth2 can be created without sales contact.",
+          "apiSurface": "Documented public REST and SOAP APIs (Salesforce REST API, Bulk API, GraphQL API), very broad surface; existing MCP servers available from Salesforce and community.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_rest.htm",
+          "composioSupported": true,
+          "composioTools": 184,
+          "composioTriggers": 7,
+          "composioAuth": [
+            "OAUTH2",
+            "S2S_OAUTH2"
+          ],
+          "pass": "first",
+          "docsSource": "live",
+          "final": {
+            "id": 1,
+            "name": "Salesforce",
+            "group": "CRM & Sales",
+            "hint": "https://www.salesforce.com/",
+            "oneLiner": "Salesforce is the world's leading cloud CRM platform enabling sales, service, marketing, and agentic AI workflows via a unified Customer 360 data platform.",
+            "category": "CRM",
+            "auth": [
+              "OAuth2"
+            ],
+            "authPrimary": "OAuth2",
+            "selfServe": "self-serve",
+            "selfServeNote": "Self-serve via free Developer Edition and trial sign-ups (e.g. 'Start for free' on site); OAuth2 connected apps can be created by any developer in a Salesforce org without sales contact. Paid editions required for production scale/higher API limits.",
+            "apiSurface": "Documented public REST and SOAP APIs (Salesforce REST API at /services/data/vXX.X), GraphQL via Salesforce GraphQL API, Bulk API, Metadata API, and 184 tools + 7 triggers already mapped in Composio; no official MCP server but agent/Headless 360 access noted.",
+            "verdict": "buildable",
+            "blocker": "none",
+            "evidence": "https://www.salesforce.com/ (live fetch shows Agentic CRM, Headless 360, free start, Developer Edition implied) + Composio verified catalogue: authModes OAUTH2/S2S_OAUTH2, baseUrl https://login.salesforce.com/services/data/v67.0, tools=184",
+            "composioSupported": true,
+            "composioTools": 184,
+            "composioTriggers": 7,
+            "composioAuth": [
+              "OAUTH2",
+              "S2S_OAUTH2"
+            ],
+            "pass": "final"
+          }
+        }
+      },
+      "finalPass": {
+        "correct": 4,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": true
+        },
+        "accuracy": 1,
+        "record": {
+          "id": 1,
+          "name": "Salesforce",
+          "group": "CRM & Sales",
+          "hint": "https://www.salesforce.com/",
+          "oneLiner": "Salesforce is the world's leading cloud CRM platform enabling sales, service, marketing, and agentic AI workflows via a unified Customer 360 data platform.",
+          "category": "CRM",
+          "auth": [
+            "OAuth2"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "self-serve",
+          "selfServeNote": "Self-serve via free Developer Edition and trial sign-ups (e.g. 'Start for free' on site); OAuth2 connected apps can be created by any developer in a Salesforce org without sales contact. Paid editions required for production scale/higher API limits.",
+          "apiSurface": "Documented public REST and SOAP APIs (Salesforce REST API at /services/data/vXX.X), GraphQL via Salesforce GraphQL API, Bulk API, Metadata API, and 184 tools + 7 triggers already mapped in Composio; no official MCP server but agent/Headless 360 access noted.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://www.salesforce.com/ (live fetch shows Agentic CRM, Headless 360, free start, Developer Edition implied) + Composio verified catalogue: authModes OAUTH2/S2S_OAUTH2, baseUrl https://login.salesforce.com/services/data/v67.0, tools=184",
+          "composioSupported": true,
+          "composioTools": 184,
+          "composioTriggers": 7,
+          "composioAuth": [
+            "OAUTH2",
+            "S2S_OAUTH2"
+          ],
+          "pass": "final"
+        }
+      },
+      "improved": false,
+      "composioSupported": true
+    },
+    {
+      "id": 5,
+      "name": "Twenty",
+      "group": "CRM & Sales",
+      "truth": {
+        "oneLiner": "Twenty is an open-source CRM providing a REST API to manage core objects like companies, people, and opportunities with programmatic access.",
+        "auth": [
+          "APIKey"
+        ],
+        "selfServe": "self-serve",
+        "verdict": "buildable",
+        "blocker": "",
+        "evidence": "https://twenty.com/developers/rest-api/core-concepts"
+      },
+      "firstPass": {
+        "correct": 4,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": true
+        },
+        "accuracy": 1,
+        "record": {
+          "id": 5,
+          "name": "Twenty",
+          "group": "CRM & Sales",
+          "hint": "https://twenty.com/",
+          "oneLiner": "Twenty is an open-source CRM for managing companies, people, and sales pipelines.",
+          "category": "CRM & Sales",
+          "auth": [
+            "APIKey",
+            "BearerToken"
+          ],
+          "authPrimary": "APIKey",
+          "selfServe": "self-serve",
+          "selfServeNote": "Open-source self-hosted or cloud app with public API and API key generation in settings, no approval needed.",
+          "apiSurface": "Documented public GraphQL API (broad: objects, records, search, mutations); no official MCP found.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://twenty.com/developers/rest-api/core-concepts and https://twenty.com/docs/api",
+          "composioSupported": false,
+          "composioTools": null,
+          "composioTriggers": null,
+          "composioAuth": null,
+          "pass": "first",
+          "docsSource": "live",
+          "final": {
+            "id": 5,
+            "name": "Twenty",
+            "group": "CRM & Sales",
+            "hint": "https://twenty.com/",
+            "oneLiner": "Twenty is an open-source, developer-first enterprise CRM providing building blocks (SDK, API) to scaffold and customize CRM objects, views, and workflows at AI speed.",
+            "category": "CRM",
+            "auth": [
+              "APIKey",
+              "Other"
+            ],
+            "authPrimary": "APIKey",
+            "selfServe": "self-serve",
+            "selfServeNote": "Self-serve via open-source deployment or Twenty cloud sign-up ('Get started' / 'Log in' on site); API key creatable in workspace settings (docs show 'API - Key name' in UI). No paid-plan/admin/partner gate cited for API access.",
+            "apiSurface": "Documented public REST/GraphQL API plus 'twenty-sdk' for code-first schema definition (objects, fields, views, relations). No mention of existing MCP server or agent skills in retrieved text; SDK implies programmatic agent-toolkit buildability.",
+            "verdict": "buildable",
+            "blocker": "none",
+            "evidence": "https://twenty.com/ (landing page with Get started/Log in, API key UI reference, and twenty-sdk code examples for custom CRM objects)",
+            "composioSupported": false,
+            "composioTools": null,
+            "composioTriggers": null,
+            "composioAuth": null,
+            "pass": "final"
+          }
+        }
+      },
+      "finalPass": {
+        "correct": 4,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": true
+        },
+        "accuracy": 1,
+        "record": {
+          "id": 5,
+          "name": "Twenty",
+          "group": "CRM & Sales",
+          "hint": "https://twenty.com/",
+          "oneLiner": "Twenty is an open-source, developer-first enterprise CRM providing building blocks (SDK, API) to scaffold and customize CRM objects, views, and workflows at AI speed.",
+          "category": "CRM",
+          "auth": [
+            "APIKey",
+            "Other"
+          ],
+          "authPrimary": "APIKey",
+          "selfServe": "self-serve",
+          "selfServeNote": "Self-serve via open-source deployment or Twenty cloud sign-up ('Get started' / 'Log in' on site); API key creatable in workspace settings (docs show 'API - Key name' in UI). No paid-plan/admin/partner gate cited for API access.",
+          "apiSurface": "Documented public REST/GraphQL API plus 'twenty-sdk' for code-first schema definition (objects, fields, views, relations). No mention of existing MCP server or agent skills in retrieved text; SDK implies programmatic agent-toolkit buildability.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://twenty.com/ (landing page with Get started/Log in, API key UI reference, and twenty-sdk code examples for custom CRM objects)",
+          "composioSupported": false,
+          "composioTools": null,
+          "composioTriggers": null,
+          "composioAuth": null,
+          "pass": "final"
+        }
+      },
+      "improved": false,
+      "composioSupported": false
+    },
+    {
+      "id": 11,
+      "name": "Zendesk",
+      "group": "Support & Helpdesk",
+      "truth": {
+        "oneLiner": "Zendesk provides a comprehensive developer platform for building customer service and support integrations via REST APIs, webhooks, and SDKs.",
+        "auth": [
+          "OAuth2",
+          "APIKey",
+          "Basic"
+        ],
+        "selfServe": "self-serve",
+        "verdict": "buildable",
+        "blocker": "",
+        "evidence": "https://developer.zendesk.com/documentation/"
+      },
+      "firstPass": {
+        "correct": 4,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": true
+        },
+        "accuracy": 1,
+        "record": {
+          "id": 11,
+          "name": "Zendesk",
+          "group": "Support & Helpdesk",
+          "hint": "https://www.zendesk.com/",
+          "oneLiner": "Zendesk is a customer support and helpdesk platform for managing tickets, conversations, and customer service workflows.",
+          "category": "Support & Helpdesk",
+          "auth": [
+            "OAuth2"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "self-serve",
+          "selfServeNote": "Zendesk provides self-serve developer account signup and OAuth2 app creation in the Admin Center without sales engagement.",
+          "apiSurface": "Documented public REST API (broad: tickets, users, organizations, talks, chats, help center, etc.); no official MCP but Composio provides 451 tools and 2 triggers.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://developer.zendesk.com/documentation/",
+          "composioSupported": true,
+          "composioTools": 451,
+          "composioTriggers": 2,
+          "composioAuth": [
+            "OAUTH2"
+          ],
+          "pass": "first",
+          "docsSource": "live",
+          "final": {
+            "id": 11,
+            "name": "Zendesk",
+            "group": "Support & Helpdesk",
+            "hint": "https://www.zendesk.com/",
+            "oneLiner": "Zendesk is an AI-first customer service and support platform offering ticketing, omnichannel messaging, knowledge base, and autonomous AI agents for customer and employee service.",
+            "category": "Support",
+            "auth": [
+              "OAuth2"
+            ],
+            "authPrimary": "OAuth2",
+            "selfServe": "self-serve",
+            "selfServeNote": "Self-serve via 14-day free trial, no credit card required (per zendesk.com homepage: '14-day free trial. No credit card required.'); developer OAuth2 app registration available via self-serve Zendesk account. Verified Composio data shows OAUTH2 auth mode supported.",
+            "apiSurface": "Documented public REST API (base URL https://{{subdomain}}.zendesk.com per Composio); 451 tools and 2 triggers in Composio catalogue indicating broad API coverage. No MCP server or agent skills mentioned in retrieved homepage text; developer docs linked via site but not fetched.",
+            "verdict": "buildable",
+            "blocker": "none",
+            "evidence": "https://www.zendesk.com/ (homepage: '14-day free trial. No credit card required.'); VERIFIED Composio catalogue data: authModes=['OAUTH2'], tools=451, baseUrl=https://{{subdomain}}.zendesk.com",
+            "composioSupported": true,
+            "composioTools": 451,
+            "composioTriggers": 2,
+            "composioAuth": [
+              "OAUTH2"
+            ],
+            "pass": "final"
+          }
+        }
+      },
+      "finalPass": {
+        "correct": 4,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": true
+        },
+        "accuracy": 1,
+        "record": {
+          "id": 11,
+          "name": "Zendesk",
+          "group": "Support & Helpdesk",
+          "hint": "https://www.zendesk.com/",
+          "oneLiner": "Zendesk is an AI-first customer service and support platform offering ticketing, omnichannel messaging, knowledge base, and autonomous AI agents for customer and employee service.",
+          "category": "Support",
+          "auth": [
+            "OAuth2"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "self-serve",
+          "selfServeNote": "Self-serve via 14-day free trial, no credit card required (per zendesk.com homepage: '14-day free trial. No credit card required.'); developer OAuth2 app registration available via self-serve Zendesk account. Verified Composio data shows OAUTH2 auth mode supported.",
+          "apiSurface": "Documented public REST API (base URL https://{{subdomain}}.zendesk.com per Composio); 451 tools and 2 triggers in Composio catalogue indicating broad API coverage. No MCP server or agent skills mentioned in retrieved homepage text; developer docs linked via site but not fetched.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://www.zendesk.com/ (homepage: '14-day free trial. No credit card required.'); VERIFIED Composio catalogue data: authModes=['OAUTH2'], tools=451, baseUrl=https://{{subdomain}}.zendesk.com",
+          "composioSupported": true,
+          "composioTools": 451,
+          "composioTriggers": 2,
+          "composioAuth": [
+            "OAUTH2"
+          ],
+          "pass": "final"
+        }
+      },
+      "improved": false,
+      "composioSupported": true
+    },
+    {
+      "id": 21,
+      "name": "Slack",
+      "group": "Comms & Messaging",
+      "truth": {
+        "oneLiner": "Slack provides a Web API and platform for building bots, apps, and integrations that interact with Slack workspaces via messages, channels, and events.",
+        "auth": [
+          "OAuth2",
+          "BearerToken",
+          "Other"
+        ],
+        "selfServe": "self-serve",
+        "verdict": "buildable",
+        "blocker": "",
+        "evidence": "https://api.slack.com/authentication and https://api.slack.com/start"
+      },
+      "firstPass": {
+        "correct": 4,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": true
+        },
+        "accuracy": 1,
+        "record": {
+          "id": 21,
+          "name": "Slack",
+          "group": "Comms & Messaging",
+          "hint": "https://slack.com/",
+          "oneLiner": "Slack is a business communication platform offering channels, messaging, and app integrations for teams.",
+          "category": "Comms & Messaging",
+          "auth": [
+            "OAuth2"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "self-serve",
+          "selfServeNote": "Slack provides a public self-serve developer portal where anyone can create an app and obtain OAuth2 credentials without approval gates.",
+          "apiSurface": "Documented public REST Web API (slack.com/api) with very broad surface (~158 tools in Composio), plus Events API for triggers; community MCP servers exist.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://slack.com/api and https://api.slack.com/",
+          "composioSupported": true,
+          "composioTools": 158,
+          "composioTriggers": 9,
+          "composioAuth": [
+            "OAUTH2"
+          ],
+          "pass": "first",
+          "docsSource": "live",
+          "final": {
+            "id": 21,
+            "name": "Slack",
+            "group": "Comms & Messaging",
+            "hint": "https://slack.com/",
+            "oneLiner": "Slack is a team chat and collaboration platform with a public REST API, OAuth2 auth, and native MCP support for agents.",
+            "category": "TeamChat",
+            "auth": [
+              "OAuth2"
+            ],
+            "authPrimary": "OAuth2",
+            "selfServe": "self-serve",
+            "selfServeNote": "Self-serve via Slack API free tier; public app creation and OAuth2 tokens available to any developer at no cost (api.slack.com self-serve developer onboarding).",
+            "apiSurface": "Documented public REST API at https://slack.com/api (158 tools, 9 triggers per catalogue); broad messaging/channels/users scope; native Slackbot MCP server and Partner Apps MCP for agent-toolkit connectivity.",
+            "verdict": "buildable",
+            "blocker": "none",
+            "evidence": "https://slack.com/ (landing mentions Slackbot MCP, public API at slack.com/api, dev tools); verified catalogue: authModes=OAUTH2, baseUrl=https://slack.com/api",
+            "composioSupported": true,
+            "composioTools": 158,
+            "composioTriggers": 9,
+            "composioAuth": [
+              "OAUTH2"
+            ],
+            "pass": "final"
+          }
+        }
+      },
+      "finalPass": {
+        "correct": 4,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": true
+        },
+        "accuracy": 1,
+        "record": {
+          "id": 21,
+          "name": "Slack",
+          "group": "Comms & Messaging",
+          "hint": "https://slack.com/",
+          "oneLiner": "Slack is a team chat and collaboration platform with a public REST API, OAuth2 auth, and native MCP support for agents.",
+          "category": "TeamChat",
+          "auth": [
+            "OAuth2"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "self-serve",
+          "selfServeNote": "Self-serve via Slack API free tier; public app creation and OAuth2 tokens available to any developer at no cost (api.slack.com self-serve developer onboarding).",
+          "apiSurface": "Documented public REST API at https://slack.com/api (158 tools, 9 triggers per catalogue); broad messaging/channels/users scope; native Slackbot MCP server and Partner Apps MCP for agent-toolkit connectivity.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://slack.com/ (landing mentions Slackbot MCP, public API at slack.com/api, dev tools); verified catalogue: authModes=OAUTH2, baseUrl=https://slack.com/api",
+          "composioSupported": true,
+          "composioTools": 158,
+          "composioTriggers": 9,
+          "composioAuth": [
+            "OAUTH2"
+          ],
+          "pass": "final"
+        }
+      },
+      "improved": false,
+      "composioSupported": true
+    },
+    {
+      "id": 28,
+      "name": "WhatsApp Business",
+      "group": "Comms & Messaging",
+      "truth": {
+        "oneLiner": "WhatsApp Business Platform API lets businesses send and receive WhatsApp messages programmatically via Meta's cloud or on-premise hosting.",
+        "auth": [
+          "BearerToken"
+        ],
+        "selfServe": "gated",
+        "verdict": "partial",
+        "blocker": "Requires a Meta Business Account, WhatsApp Business Account, and phone number verification; app/business must be approved and some features require Meta business verification and display name review, so not fully self-serve.",
+        "evidence": "https://developers.facebook.com/docs/whatsapp/"
+      },
+      "firstPass": {
+        "correct": 2,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": false,
+          "blocker": false
+        },
+        "accuracy": 0.5,
+        "record": {
+          "id": 28,
+          "name": "WhatsApp Business",
+          "group": "Comms & Messaging",
+          "hint": "https://developers.facebook.com/docs/whatsapp/",
+          "oneLiner": "WhatsApp Business API lets businesses send and receive messages, manage templates, and interact with customers on WhatsApp via the Meta Graph API.",
+          "category": "Comms & Messaging",
+          "auth": [
+            "OAuth2",
+            "APIKey"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "gated",
+          "selfServeNote": "Requires a Meta Business account, WhatsApp Business Account (WABA) approval, and phone number verification; API access is provisioned via Meta App dashboard but not instant self-serve for production messaging.",
+          "apiSurface": "Documented public REST API via Meta Graph API (graph.facebook.com), broad surface for messaging, templates, webhooks; no official MCP but Composio provides 57 tools and 1 trigger.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://developers.facebook.com/docs/whatsapp/",
+          "composioSupported": true,
+          "composioTools": 57,
+          "composioTriggers": 1,
+          "composioAuth": [
+            "OAUTH2",
+            "API_KEY"
+          ],
+          "pass": "first",
+          "docsSource": "wayback",
+          "final": {
+            "id": 28,
+            "name": "WhatsApp Business",
+            "group": "Comms & Messaging",
+            "hint": "https://developers.facebook.com/docs/whatsapp/",
+            "oneLiner": "WhatsApp Business Platform lets businesses send/receive messages to customers via the Meta Graph API.",
+            "category": "messaging",
+            "auth": [
+              "OAuth2",
+              "APIKey"
+            ],
+            "authPrimary": "OAuth2",
+            "selfServe": "gated",
+            "selfServeNote": "Self-serve signup via Meta Business Account and app creation is free, but sending messages requires a verified business and an approved WhatsApp Business Account / phone number; full messaging access is gated behind Meta business verification and a paid Cloud API or BSP plan (no unrestricted self-serve API key).",
+            "apiSurface": "Documented public REST API via Meta Graph API (graph.facebook.com/v22.0) for messaging, webhooks, media; no official MCP server or agent skills noted in retrieved docs.",
+            "verdict": "partial",
+            "blocker": "Business verification and approved WABA/phone number required before production messaging; not fully open self-serve",
+            "evidence": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview (redirected from https://developers.facebook.com/docs/whatsapp/)",
+            "composioSupported": true,
+            "composioTools": 57,
+            "composioTriggers": 1,
+            "composioAuth": [
+              "OAUTH2",
+              "API_KEY"
+            ],
+            "pass": "final"
+          }
+        }
+      },
+      "finalPass": {
+        "correct": 3,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": false
+        },
+        "accuracy": 0.75,
+        "record": {
+          "id": 28,
+          "name": "WhatsApp Business",
+          "group": "Comms & Messaging",
+          "hint": "https://developers.facebook.com/docs/whatsapp/",
+          "oneLiner": "WhatsApp Business Platform lets businesses send/receive messages to customers via the Meta Graph API.",
+          "category": "messaging",
+          "auth": [
+            "OAuth2",
+            "APIKey"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "gated",
+          "selfServeNote": "Self-serve signup via Meta Business Account and app creation is free, but sending messages requires a verified business and an approved WhatsApp Business Account / phone number; full messaging access is gated behind Meta business verification and a paid Cloud API or BSP plan (no unrestricted self-serve API key).",
+          "apiSurface": "Documented public REST API via Meta Graph API (graph.facebook.com/v22.0) for messaging, webhooks, media; no official MCP server or agent skills noted in retrieved docs.",
+          "verdict": "partial",
+          "blocker": "Business verification and approved WABA/phone number required before production messaging; not fully open self-serve",
+          "evidence": "https://developers.facebook.com/documentation/business-messaging/whatsapp/overview (redirected from https://developers.facebook.com/docs/whatsapp/)",
+          "composioSupported": true,
+          "composioTools": 57,
+          "composioTriggers": 1,
+          "composioAuth": [
+            "OAUTH2",
+            "API_KEY"
+          ],
+          "pass": "final"
+        }
+      },
+      "improved": true,
+      "composioSupported": true
+    },
+    {
+      "id": 31,
+      "name": "Google Ads",
+      "group": "Marketing & Social",
+      "truth": {
+        "oneLiner": "Google Ads API lets developers programmatically manage Google Ads campaigns, ad groups, keywords, and reporting.",
+        "auth": [
+          "OAuth2",
+          "APIKey"
+        ],
+        "selfServe": "gated",
+        "verdict": "partial",
+        "blocker": "API access requires a Google Ads manager account, production access approval via a compliance review, and OAuth2 client setup; not instantly self-serve for all use cases.",
+        "evidence": "https://developers.google.com/google-ads/docs/get-started"
+      },
+      "firstPass": {
+        "correct": 2,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": false,
+          "blocker": false
+        },
+        "accuracy": 0.5,
+        "record": {
+          "id": 31,
+          "name": "Google Ads",
+          "group": "Marketing & Social",
+          "hint": "https://developers.google.com/google-ads/",
+          "oneLiner": "Google Ads is an online advertising platform for creating, managing, and measuring paid ad campaigns across Google's properties.",
+          "category": "Marketing & Social",
+          "auth": [
+            "OAuth2"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "gated",
+          "selfServeNote": "Requires a Google Ads manager account, developer token approval from Google, and OAuth2 client setup in Google Cloud Console; token access is reviewed and granted by Google, not instant self-serve.",
+          "apiSurface": "Documented public REST (gRPC also) Google Ads API with broad surface (campaigns, ad groups, keywords, reporting); no official MCP but Composio provides 22 tools.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://developers.google.com/google-ads/",
+          "composioSupported": true,
+          "composioTools": 22,
+          "composioTriggers": 0,
+          "composioAuth": [
+            "OAUTH2"
+          ],
+          "pass": "first",
+          "docsSource": "live",
+          "final": {
+            "id": 31,
+            "name": "Google Ads",
+            "group": "Marketing & Social",
+            "hint": "https://developers.google.com/google-ads/",
+            "oneLiner": "Google Ads API lets you programmatically create and manage ad campaigns across Search, Display, YouTube, and Shopping via REST.",
+            "category": "Advertising",
+            "auth": [
+              "OAuth2"
+            ],
+            "authPrimary": "OAuth2",
+            "selfServe": "gated",
+            "selfServeNote": "Self-serve OAuth2 developer token requires a Google Ads account and production access approval; test accounts are free but production API access is gated behind a manager account and token review (not open to all without approval).",
+            "apiSurface": "Documented public REST Google Ads API (googleads.googleapis.com) plus Google Ads Scripts and Lead Form Webhook; no native MCP server or agent skills mentioned in docs.",
+            "verdict": "partial",
+            "blocker": "Production API access requires approved developer token (gated review), though test accounts are self-serve",
+            "evidence": "https://developers.google.com/google-ads/",
+            "composioSupported": true,
+            "composioTools": 22,
+            "composioTriggers": 0,
+            "composioAuth": [
+              "OAUTH2"
+            ],
+            "pass": "final"
+          }
+        }
+      },
+      "finalPass": {
+        "correct": 3,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": false
+        },
+        "accuracy": 0.75,
+        "record": {
+          "id": 31,
+          "name": "Google Ads",
+          "group": "Marketing & Social",
+          "hint": "https://developers.google.com/google-ads/",
+          "oneLiner": "Google Ads API lets you programmatically create and manage ad campaigns across Search, Display, YouTube, and Shopping via REST.",
+          "category": "Advertising",
+          "auth": [
+            "OAuth2"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "gated",
+          "selfServeNote": "Self-serve OAuth2 developer token requires a Google Ads account and production access approval; test accounts are free but production API access is gated behind a manager account and token review (not open to all without approval).",
+          "apiSurface": "Documented public REST Google Ads API (googleads.googleapis.com) plus Google Ads Scripts and Lead Form Webhook; no native MCP server or agent skills mentioned in docs.",
+          "verdict": "partial",
+          "blocker": "Production API access requires approved developer token (gated review), though test accounts are self-serve",
+          "evidence": "https://developers.google.com/google-ads/",
+          "composioSupported": true,
+          "composioTools": 22,
+          "composioTriggers": 0,
+          "composioAuth": [
+            "OAUTH2"
+          ],
+          "pass": "final"
+        }
+      },
+      "improved": true,
+      "composioSupported": true
+    },
+    {
+      "id": 41,
+      "name": "Shopify",
+      "group": "Ecommerce",
+      "truth": {
+        "oneLiner": "Shopify provides a comprehensive REST and GraphQL Admin API plus Storefront API for building commerce apps, themes, and custom storefronts.",
+        "auth": [
+          "OAuth2",
+          "APIKey",
+          "BearerToken"
+        ],
+        "selfServe": "self-serve",
+        "verdict": "buildable",
+        "blocker": "",
+        "evidence": "https://shopify.dev/docs/api"
+      },
+      "firstPass": {
+        "correct": 4,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": true
+        },
+        "accuracy": 1,
+        "record": {
+          "id": 41,
+          "name": "Shopify",
+          "group": "Ecommerce",
+          "hint": "https://shopify.dev/",
+          "oneLiner": "Shopify is an ecommerce platform for building and managing online stores, products, orders, and customers.",
+          "category": "Ecommerce",
+          "auth": [
+            "OAuth2",
+            "APIKey"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "self-serve",
+          "selfServeNote": "Developers can create a Shopify Partner account and app credentials (API key, OAuth client) freely via the Shopify Partners dashboard and Admin API access tokens without sales/gated approval for standard use.",
+          "apiSurface": "Documented public REST and GraphQL Admin APIs, very broad (hundreds of endpoints/resources), plus Storefront API; existing Shopify MCP server published by Shopify.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://shopify.dev/docs/api",
+          "composioSupported": true,
+          "composioTools": 315,
+          "composioTriggers": 0,
+          "composioAuth": [
+            "OAUTH2",
+            "API_KEY",
+            "S2S_OAUTH2"
+          ],
+          "pass": "first",
+          "docsSource": "live",
+          "final": {
+            "id": 41,
+            "name": "Shopify",
+            "group": "Ecommerce",
+            "hint": "https://shopify.dev/",
+            "oneLiner": "Shopify is an ecommerce platform enabling developers to build apps, storefronts, and agentic shopping experiences via public APIs and dev tools.",
+            "category": "Ecommerce",
+            "auth": [
+              "OAuth2",
+              "APIKey",
+              "Other"
+            ],
+            "authPrimary": "OAuth2",
+            "selfServe": "self-serve",
+            "selfServeNote": "Self-serve via Shopify Partners account and Shopify CLI to create apps; free Partner account and dev store available (docs: 'Build your first app', 'Install Shopify CLI globally', 'shopify app init'). No paid-plan/admin/partner-approval gate for initial build; App Store submission has requirements but not a build gate.",
+            "apiSurface": "Documented public REST Admin API (baseUrl https://{{subdomain}}.myshopify.com/admin/api/2026-04) plus GraphQL; 315 tools in Composio catalogue; supports agent building via UCP ('Build agents with UCP'); no MCP server mentioned in fetched text.",
+            "verdict": "buildable",
+            "blocker": "none",
+            "evidence": "https://shopify.dev/ (live fetch: Apps, Storefronts, Agents, Shopify CLI 3.0 init commands, UCP agent building)",
+            "composioSupported": true,
+            "composioTools": 315,
+            "composioTriggers": 0,
+            "composioAuth": [
+              "OAUTH2",
+              "API_KEY",
+              "S2S_OAUTH2"
+            ],
+            "pass": "final"
+          }
+        }
+      },
+      "finalPass": {
+        "correct": 4,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": true
+        },
+        "accuracy": 1,
+        "record": {
+          "id": 41,
+          "name": "Shopify",
+          "group": "Ecommerce",
+          "hint": "https://shopify.dev/",
+          "oneLiner": "Shopify is an ecommerce platform enabling developers to build apps, storefronts, and agentic shopping experiences via public APIs and dev tools.",
+          "category": "Ecommerce",
+          "auth": [
+            "OAuth2",
+            "APIKey",
+            "Other"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "self-serve",
+          "selfServeNote": "Self-serve via Shopify Partners account and Shopify CLI to create apps; free Partner account and dev store available (docs: 'Build your first app', 'Install Shopify CLI globally', 'shopify app init'). No paid-plan/admin/partner-approval gate for initial build; App Store submission has requirements but not a build gate.",
+          "apiSurface": "Documented public REST Admin API (baseUrl https://{{subdomain}}.myshopify.com/admin/api/2026-04) plus GraphQL; 315 tools in Composio catalogue; supports agent building via UCP ('Build agents with UCP'); no MCP server mentioned in fetched text.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://shopify.dev/ (live fetch: Apps, Storefronts, Agents, Shopify CLI 3.0 init commands, UCP agent building)",
+          "composioSupported": true,
+          "composioTools": 315,
+          "composioTriggers": 0,
+          "composioAuth": [
+            "OAUTH2",
+            "API_KEY",
+            "S2S_OAUTH2"
+          ],
+          "pass": "final"
+        }
+      },
+      "improved": false,
+      "composioSupported": true
+    },
+    {
+      "id": 44,
+      "name": "Salesforce Commerce Cloud",
+      "group": "Ecommerce",
+      "truth": {
+        "oneLiner": "Salesforce Commerce Cloud provides APIs for building and managing e-commerce storefronts, including shopper, catalog, and order management via REST and Open Commerce APIs.",
+        "auth": [
+          "OAuth2",
+          "APIKey"
+        ],
+        "selfServe": "gated",
+        "verdict": "partial",
+        "blocker": "API access and credentials require a Salesforce Commerce Cloud instance/account (typically via partner or customer provisioning), not fully self-serve sign-up for public API keys.",
+        "evidence": "https://developer.salesforce.com/docs/commerce-cloud"
+      },
+      "firstPass": {
+        "correct": 3,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": false
+        },
+        "accuracy": 0.75,
+        "record": {
+          "id": 44,
+          "name": "Salesforce Commerce Cloud",
+          "group": "Ecommerce",
+          "hint": "https://developer.salesforce.com/docs/commerce-cloud",
+          "oneLiner": "Cloud-based ecommerce platform for building and managing B2C/B2B storefronts, orders, and merchandising.",
+          "category": "Ecommerce",
+          "auth": [
+            "OAuth2",
+            "APIKey",
+            "BearerToken"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "gated",
+          "selfServeNote": "Requires Salesforce Commerce Cloud license/tenant and Business Manager account; API credentials (SLAS, Open Commerce API keys) provisioned inside a paid realm, not openly sign-upable.",
+          "apiSurface": "Documented public REST APIs (Open Commerce API, Shopper APIs, Management APIs) and GraphQL; broad surface across cart, catalog, checkout, pricing; no official MCP found.",
+          "verdict": "partial",
+          "blocker": "Tenant/license gating and credential provisioning inside Business Manager make fully self-serve agent toolkit onboarding impossible without customer-owned instance.",
+          "evidence": "https://developer.salesforce.com/docs/commerce-cloud",
+          "composioSupported": false,
+          "composioTools": null,
+          "composioTriggers": null,
+          "composioAuth": null,
+          "pass": "first",
+          "docsSource": "unreachable",
+          "final": {
+            "id": 44,
+            "name": "Salesforce Commerce Cloud",
+            "group": "Ecommerce",
+            "hint": "https://developer.salesforce.com/docs/commerce-cloud",
+            "oneLiner": "Salesforce Commerce Cloud is an enterprise cloud-based ecommerce platform for building and managing B2C/B2B storefronts, orders, and catalogs via APIs.",
+            "category": "Ecommerce",
+            "auth": [
+              "OAuth2",
+              "APIKey",
+              "BearerToken"
+            ],
+            "authPrimary": "OAuth2",
+            "selfServe": "gated",
+            "selfServeNote": "Uncertain: developer docs hint URL was unreachable; based on general knowledge, Salesforce Commerce Cloud requires a paid Salesforce Commerce Cloud license/tenant and partner/enterprise onboarding (not a free self-serve signup). API access is gated to licensed customers and requires admin provisioning of API clients.",
+            "apiSurface": "Documented public REST and Open Commerce API (OCAPI) plus GraphQL for storefront; no known official MCP server or agent skills from docs (unverified due to unreachable docs).",
+            "verdict": "partial",
+            "blocker": "No free/self-serve API access; requires paid enterprise license and admin provisioned API credentials, plus docs unreachable to confirm exact auth and MCP readiness.",
+            "evidence": "https://developer.salesforce.com/docs/commerce-cloud (unreachable at classification time; general knowledge used)",
+            "composioSupported": false,
+            "composioTools": null,
+            "composioTriggers": null,
+            "composioAuth": null,
+            "pass": "final"
+          }
+        }
+      },
+      "finalPass": {
+        "correct": 3,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": false
+        },
+        "accuracy": 0.75,
+        "record": {
+          "id": 44,
+          "name": "Salesforce Commerce Cloud",
+          "group": "Ecommerce",
+          "hint": "https://developer.salesforce.com/docs/commerce-cloud",
+          "oneLiner": "Salesforce Commerce Cloud is an enterprise cloud-based ecommerce platform for building and managing B2C/B2B storefronts, orders, and catalogs via APIs.",
+          "category": "Ecommerce",
+          "auth": [
+            "OAuth2",
+            "APIKey",
+            "BearerToken"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "gated",
+          "selfServeNote": "Uncertain: developer docs hint URL was unreachable; based on general knowledge, Salesforce Commerce Cloud requires a paid Salesforce Commerce Cloud license/tenant and partner/enterprise onboarding (not a free self-serve signup). API access is gated to licensed customers and requires admin provisioning of API clients.",
+          "apiSurface": "Documented public REST and Open Commerce API (OCAPI) plus GraphQL for storefront; no known official MCP server or agent skills from docs (unverified due to unreachable docs).",
+          "verdict": "partial",
+          "blocker": "No free/self-serve API access; requires paid enterprise license and admin provisioned API credentials, plus docs unreachable to confirm exact auth and MCP readiness.",
+          "evidence": "https://developer.salesforce.com/docs/commerce-cloud (unreachable at classification time; general knowledge used)",
+          "composioSupported": false,
+          "composioTools": null,
+          "composioTriggers": null,
+          "composioAuth": null,
+          "pass": "final"
+        }
+      },
+      "improved": false,
+      "composioSupported": false
+    },
+    {
+      "id": 51,
+      "name": "DataForSEO",
+      "group": "Data, SEO & Scraping",
+      "truth": {
+        "oneLiner": "DataForSEO provides a REST API for SEO and marketing data including rankings, keywords, backlinks, and SERP results via paid subscription.",
+        "auth": [
+          "APIKey",
+          "Basic"
+        ],
+        "selfServe": "gated",
+        "verdict": "partial",
+        "blocker": "API access requires a paid subscription/account with credits; free trial may be limited and not fully self-serve without signup and payment",
+        "evidence": "https://docs.dataforseo.com/"
+      },
+      "firstPass": {
+        "correct": 1,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": false,
+          "verdict": false,
+          "blocker": false
+        },
+        "accuracy": 0.25,
+        "record": {
+          "id": 51,
+          "name": "DataForSEO",
+          "group": "Data, SEO & Scraping",
+          "hint": "https://docs.dataforseo.com/",
+          "oneLiner": "DataForSEO provides SEO, SERP, keyword, and backlink data APIs for marketing and search intelligence.",
+          "category": "Data, SEO & Scraping",
+          "auth": [
+            "APIKey",
+            "Basic"
+          ],
+          "authPrimary": "APIKey",
+          "selfServe": "self-serve",
+          "selfServeNote": "Users can sign up on the website and immediately obtain API credentials from their dashboard without approval gates.",
+          "apiSurface": "Documented public REST API, broad surface covering SERP, Keywords, Backlinks, On-Page, Domain Analytics, and more; no official MCP found.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://docs.dataforseo.com/",
+          "composioSupported": false,
+          "composioTools": null,
+          "composioTriggers": null,
+          "composioAuth": null,
+          "pass": "first",
+          "docsSource": "live",
+          "final": {
+            "id": 51,
+            "name": "DataForSEO",
+            "group": "Data, SEO & Scraping",
+            "hint": "https://docs.dataforseo.com/",
+            "oneLiner": "DataForSEO provides a REST API for SEO and digital marketing data including SERP, keywords, and on-page analysis with official client libraries and LLM-friendly docs.",
+            "category": "SEOData",
+            "auth": [
+              "Basic"
+            ],
+            "authPrimary": "Basic",
+            "selfServe": "self-serve",
+            "selfServeNote": "Free Unlimited Trial available via self-serve dashboard signup; docs mention 'Free Unlimited Trial Info' and API Playground with no sales contact required for trial (paid plans likely after trial but trial is self-serve).",
+            "apiSurface": "Documented public REST API (HTTP/JSON/XML/HTML), broad coverage across SERP, Keyword, On-Page, Backlinks APIs; official PHP/C#/Java/Python/TypeScript clients; OpenAPI spec, LLMs.txt, LangChain wrapper; no native MCP server mentioned.",
+            "verdict": "buildable",
+            "blocker": "none",
+            "evidence": "https://docs.dataforseo.com/ (Introduction, REST technology, Client libraries, Free Unlimited Trial Info, OpenAPI specification, LangChain integration)",
+            "composioSupported": false,
+            "composioTools": null,
+            "composioTriggers": null,
+            "composioAuth": null,
+            "pass": "final"
+          }
+        }
+      },
+      "finalPass": {
+        "correct": 1,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": false,
+          "verdict": false,
+          "blocker": false
+        },
+        "accuracy": 0.25,
+        "record": {
+          "id": 51,
+          "name": "DataForSEO",
+          "group": "Data, SEO & Scraping",
+          "hint": "https://docs.dataforseo.com/",
+          "oneLiner": "DataForSEO provides a REST API for SEO and digital marketing data including SERP, keywords, and on-page analysis with official client libraries and LLM-friendly docs.",
+          "category": "SEOData",
+          "auth": [
+            "Basic"
+          ],
+          "authPrimary": "Basic",
+          "selfServe": "self-serve",
+          "selfServeNote": "Free Unlimited Trial available via self-serve dashboard signup; docs mention 'Free Unlimited Trial Info' and API Playground with no sales contact required for trial (paid plans likely after trial but trial is self-serve).",
+          "apiSurface": "Documented public REST API (HTTP/JSON/XML/HTML), broad coverage across SERP, Keyword, On-Page, Backlinks APIs; official PHP/C#/Java/Python/TypeScript clients; OpenAPI spec, LLMs.txt, LangChain wrapper; no native MCP server mentioned.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://docs.dataforseo.com/ (Introduction, REST technology, Client libraries, Free Unlimited Trial Info, OpenAPI specification, LangChain integration)",
+          "composioSupported": false,
+          "composioTools": null,
+          "composioTriggers": null,
+          "composioAuth": null,
+          "pass": "final"
+        }
+      },
+      "improved": false,
+      "composioSupported": false
+    },
+    {
+      "id": 58,
+      "name": "Sherlock",
+      "group": "Data, SEO & Scraping",
+      "truth": {
+        "oneLiner": "Sherlock is an open-source command-line tool (not a hosted API) that finds usernames across social networks by querying sites directly from a local repository of definitions.",
+        "auth": [
+          "Other"
+        ],
+        "selfServe": "self-serve",
+        "verdict": "blocked",
+        "blocker": "No public HTTP API or developer endpoints are documented; Sherlock is a Python CLI application run locally, so there is no remote API to build an agent toolkit against.",
+        "evidence": "https://github.com/sherlock-project/sherlock"
+      },
+      "firstPass": {
+        "correct": 2,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": false,
+          "blocker": false
+        },
+        "accuracy": 0.5,
+        "record": {
+          "id": 58,
+          "name": "Sherlock",
+          "group": "Data, SEO & Scraping",
+          "hint": "https://github.com/sherlock-project/sherlock",
+          "oneLiner": "Sherlock is an open-source command-line tool that finds usernames across many social networks and websites.",
+          "category": "Data, SEO & Scraping",
+          "auth": [
+            "Other"
+          ],
+          "authPrimary": "Other",
+          "selfServe": "self-serve",
+          "selfServeNote": "It is a free open-source CLI project on GitHub with no account or gated access required to use or integrate.",
+          "apiSurface": "No documented public REST/GraphQL API; it is a Python CLI library with functions that can be imported, no official MCP server exists.",
+          "verdict": "partial",
+          "blocker": "No official hosted API or auth; would require wrapping the open-source CLI/library as a local tool rather than a standard SaaS API integration.",
+          "evidence": "https://github.com/sherlock-project/sherlock",
+          "composioSupported": false,
+          "composioTools": null,
+          "composioTriggers": null,
+          "composioAuth": null,
+          "pass": "first",
+          "docsSource": "live",
+          "final": {
+            "id": 58,
+            "name": "Sherlock",
+            "group": "Data, SEO & Scraping",
+            "hint": "https://github.com/sherlock-project/sherlock",
+            "oneLiner": "Sherlock is an open-source CLI tool to hunt down social media accounts by username across 400+ social networks via local scraping.",
+            "category": "OSINT",
+            "auth": [
+              "Other"
+            ],
+            "authPrimary": "Other",
+            "selfServe": "self-serve",
+            "selfServeNote": "Fully self-serve and free; install via pipx/pip/uv/Docker or community packages (MIT licensed, no account or tier required) per GitHub README.",
+            "apiSurface": "No documented public REST/GraphQL API; it is a Python CLI library (sherlock_project) run locally with no remote API, no MCP server or agent skills found in docs.",
+            "verdict": "blocked",
+            "blocker": "No hosted API or remote service; purely a local CLI/Python tool with no programmatic web API, auth, or endpoint to integrate as an agent toolkit without wrapping the CLI locally.",
+            "evidence": "https://github.com/sherlock-project/sherlock",
+            "composioSupported": false,
+            "composioTools": null,
+            "composioTriggers": null,
+            "composioAuth": null,
+            "pass": "final"
+          }
+        }
+      },
+      "finalPass": {
+        "correct": 3,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": false
+        },
+        "accuracy": 0.75,
+        "record": {
+          "id": 58,
+          "name": "Sherlock",
+          "group": "Data, SEO & Scraping",
+          "hint": "https://github.com/sherlock-project/sherlock",
+          "oneLiner": "Sherlock is an open-source CLI tool to hunt down social media accounts by username across 400+ social networks via local scraping.",
+          "category": "OSINT",
+          "auth": [
+            "Other"
+          ],
+          "authPrimary": "Other",
+          "selfServe": "self-serve",
+          "selfServeNote": "Fully self-serve and free; install via pipx/pip/uv/Docker or community packages (MIT licensed, no account or tier required) per GitHub README.",
+          "apiSurface": "No documented public REST/GraphQL API; it is a Python CLI library (sherlock_project) run locally with no remote API, no MCP server or agent skills found in docs.",
+          "verdict": "blocked",
+          "blocker": "No hosted API or remote service; purely a local CLI/Python tool with no programmatic web API, auth, or endpoint to integrate as an agent toolkit without wrapping the CLI locally.",
+          "evidence": "https://github.com/sherlock-project/sherlock",
+          "composioSupported": false,
+          "composioTools": null,
+          "composioTriggers": null,
+          "composioAuth": null,
+          "pass": "final"
+        }
+      },
+      "improved": true,
+      "composioSupported": false
+    },
+    {
+      "id": 61,
+      "name": "GitHub",
+      "group": "Dev, Infra & Data",
+      "truth": {
+        "oneLiner": "GitHub REST API provides programmatic access to repositories, issues, pull requests, users, and other GitHub resources for building integrations and automations.",
+        "auth": [
+          "OAuth2",
+          "APIKey",
+          "BearerToken"
+        ],
+        "selfServe": "self-serve",
+        "verdict": "buildable",
+        "blocker": "",
+        "evidence": "https://docs.github.com/rest"
+      },
+      "firstPass": {
+        "correct": 4,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": true
+        },
+        "accuracy": 1,
+        "record": {
+          "id": 61,
+          "name": "GitHub",
+          "group": "Dev, Infra & Data",
+          "hint": "https://docs.github.com/rest",
+          "oneLiner": "GitHub is a web-based platform for version control and collaboration using Git, enabling code hosting, review, and CI/CD.",
+          "category": "Dev, Infra & Data",
+          "auth": [
+            "OAuth2"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "self-serve",
+          "selfServeNote": "GitHub OAuth Apps and Personal Access Tokens can be created by any user via self-serve developer settings without approval gates.",
+          "apiSurface": "Extensive documented public REST and GraphQL APIs at api.github.com; very broad (hundreds of endpoints); existing MCP server published by GitHub.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://docs.github.com/rest",
+          "composioSupported": true,
+          "composioTools": 871,
+          "composioTriggers": 46,
+          "composioAuth": [
+            "OAUTH2"
+          ],
+          "pass": "first",
+          "docsSource": "live",
+          "final": {
+            "id": 61,
+            "name": "GitHub",
+            "group": "Dev, Infra & Data",
+            "hint": "https://docs.github.com/rest",
+            "oneLiner": "GitHub REST API enables integrations, data retrieval, and workflow automation across GitHub repos, issues, CI, and enterprise billing with full OpenAPI coverage.",
+            "category": "DeveloperTools",
+            "auth": [
+              "OAuth2"
+            ],
+            "authPrimary": "OAuth2",
+            "selfServe": "self-serve",
+            "selfServeNote": "Self-serve free tier (Free, Pro, & Team) with OAuth app registration and personal access tokens via GitHub developer settings; no paid-plan/admin/partner gate for API access per docs versioning 'Free, Pro, & Team'.",
+            "apiSurface": "Documented public REST API (api.github.com), fully described by OpenAPI spec, 200+ doc articles, broad endpoints (repos, issues, billing, enterprises, CI); no MCP server or agent skills mentioned in retrieved text.",
+            "verdict": "buildable",
+            "blocker": "none",
+            "evidence": "https://docs.github.com/rest",
+            "composioSupported": true,
+            "composioTools": 871,
+            "composioTriggers": 46,
+            "composioAuth": [
+              "OAUTH2"
+            ],
+            "pass": "final"
+          }
+        }
+      },
+      "finalPass": {
+        "correct": 4,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": true
+        },
+        "accuracy": 1,
+        "record": {
+          "id": 61,
+          "name": "GitHub",
+          "group": "Dev, Infra & Data",
+          "hint": "https://docs.github.com/rest",
+          "oneLiner": "GitHub REST API enables integrations, data retrieval, and workflow automation across GitHub repos, issues, CI, and enterprise billing with full OpenAPI coverage.",
+          "category": "DeveloperTools",
+          "auth": [
+            "OAuth2"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "self-serve",
+          "selfServeNote": "Self-serve free tier (Free, Pro, & Team) with OAuth app registration and personal access tokens via GitHub developer settings; no paid-plan/admin/partner gate for API access per docs versioning 'Free, Pro, & Team'.",
+          "apiSurface": "Documented public REST API (api.github.com), fully described by OpenAPI spec, 200+ doc articles, broad endpoints (repos, issues, billing, enterprises, CI); no MCP server or agent skills mentioned in retrieved text.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://docs.github.com/rest",
+          "composioSupported": true,
+          "composioTools": 871,
+          "composioTriggers": 46,
+          "composioAuth": [
+            "OAUTH2"
+          ],
+          "pass": "final"
+        }
+      },
+      "improved": false,
+      "composioSupported": true
+    },
+    {
+      "id": 71,
+      "name": "Notion",
+      "group": "Productivity & PM",
+      "truth": {
+        "oneLiner": "Notion's developer platform provides a REST API to read, write, and manage Notion pages, databases, blocks, and users for integrating external apps with Notion workspaces.",
+        "auth": [
+          "OAuth2",
+          "APIKey"
+        ],
+        "selfServe": "self-serve",
+        "verdict": "buildable",
+        "blocker": "",
+        "evidence": "https://developers.notion.com/"
+      },
+      "firstPass": {
+        "correct": 4,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": true
+        },
+        "accuracy": 1,
+        "record": {
+          "id": 71,
+          "name": "Notion",
+          "group": "Productivity & PM",
+          "hint": "https://developers.notion.com/",
+          "oneLiner": "Notion is a connected workspace for notes, docs, project and knowledge management with a public API to read/write blocks, pages, databases and users.",
+          "category": "Productivity & PM",
+          "auth": [
+            "OAuth2",
+            "APIKey"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "self-serve",
+          "selfServeNote": "Developers can sign up for a Notion integration, obtain OAuth client credentials or an internal API key directly from the Notion UI without sales approval.",
+          "apiSurface": "Documented public REST API (api.notion.com), broad coverage of workspace objects (blocks, pages, databases, comments, users, search); no official MCP server but community MCP exists.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://developers.notion.com/",
+          "composioSupported": true,
+          "composioTools": 45,
+          "composioTriggers": 8,
+          "composioAuth": [
+            "OAUTH2",
+            "API_KEY"
+          ],
+          "pass": "first",
+          "docsSource": "live",
+          "final": {
+            "id": 71,
+            "name": "Notion",
+            "group": "Productivity & PM",
+            "hint": "https://developers.notion.com/",
+            "oneLiner": "Notion provides a REST API with OAuth2, internal API tokens, and personal access tokens to read, create, and update workspace pages, databases, users, and comments, plus webhooks for real-time events.",
+            "category": "Productivity",
+            "auth": [
+              "OAuth2",
+              "APIKey",
+              "BearerToken"
+            ],
+            "authPrimary": "OAuth2",
+            "selfServe": "self-serve",
+            "selfServeNote": "Self-serve free tier: developers can create internal connections, public connections (OAuth2), and personal access tokens (PATs) directly via the Developer portal without paid plan or sales contact; public connections only require security review for Marketplace listing, not for creation/use. PATs and internal tokens work on free workspaces.",
+            "apiSurface": "Documented public REST API covering pages, databases, views, data sources, file uploads, comments, search, users; webhooks for events; CLI reference and Workers support; no mention of GraphQL or official MCP server/agent skills in fetched docs.",
+            "verdict": "buildable",
+            "blocker": "none",
+            "evidence": "https://developers.notion.com/ (Get started > Overview: connection types, auth models, capabilities, webhooks, self-serve creation)",
+            "composioSupported": true,
+            "composioTools": 45,
+            "composioTriggers": 8,
+            "composioAuth": [
+              "OAUTH2",
+              "API_KEY"
+            ],
+            "pass": "final"
+          }
+        }
+      },
+      "finalPass": {
+        "correct": 4,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": true
+        },
+        "accuracy": 1,
+        "record": {
+          "id": 71,
+          "name": "Notion",
+          "group": "Productivity & PM",
+          "hint": "https://developers.notion.com/",
+          "oneLiner": "Notion provides a REST API with OAuth2, internal API tokens, and personal access tokens to read, create, and update workspace pages, databases, users, and comments, plus webhooks for real-time events.",
+          "category": "Productivity",
+          "auth": [
+            "OAuth2",
+            "APIKey",
+            "BearerToken"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "self-serve",
+          "selfServeNote": "Self-serve free tier: developers can create internal connections, public connections (OAuth2), and personal access tokens (PATs) directly via the Developer portal without paid plan or sales contact; public connections only require security review for Marketplace listing, not for creation/use. PATs and internal tokens work on free workspaces.",
+          "apiSurface": "Documented public REST API covering pages, databases, views, data sources, file uploads, comments, search, users; webhooks for events; CLI reference and Workers support; no mention of GraphQL or official MCP server/agent skills in fetched docs.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://developers.notion.com/ (Get started > Overview: connection types, auth models, capabilities, webhooks, self-serve creation)",
+          "composioSupported": true,
+          "composioTools": 45,
+          "composioTriggers": 8,
+          "composioAuth": [
+            "OAUTH2",
+            "API_KEY"
+          ],
+          "pass": "final"
+        }
+      },
+      "improved": false,
+      "composioSupported": true
+    },
+    {
+      "id": 81,
+      "name": "Stripe",
+      "group": "Finance & Fintech",
+      "truth": {
+        "oneLiner": "Stripe provides a REST API for payments, billing, subscriptions, and financial operations with comprehensive endpoints for managing customers, charges, invoices, and payouts.",
+        "auth": [
+          "APIKey",
+          "BearerToken",
+          "OAuth2"
+        ],
+        "selfServe": "self-serve",
+        "verdict": "buildable",
+        "blocker": "",
+        "evidence": "https://stripe.com/docs/api"
+      },
+      "firstPass": {
+        "correct": 4,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": true
+        },
+        "accuracy": 1,
+        "record": {
+          "id": 81,
+          "name": "Stripe",
+          "group": "Finance & Fintech",
+          "hint": "https://stripe.com/docs/api",
+          "oneLiner": "Stripe is a payment processing and financial infrastructure platform for online businesses.",
+          "category": "Finance & Fintech",
+          "auth": [
+            "OAuth2",
+            "APIKey"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "self-serve",
+          "selfServeNote": "Developers can sign up, create an account, and obtain API keys or OAuth credentials directly from the Stripe dashboard without approval gates.",
+          "apiSurface": "Extensive documented public REST API (https://stripe.com/docs/api) covering payments, billing, subscriptions, etc.; no official MCP but broad REST coverage.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://stripe.com/docs/api",
+          "composioSupported": true,
+          "composioTools": 425,
+          "composioTriggers": 7,
+          "composioAuth": [
+            "OAUTH2",
+            "API_KEY"
+          ],
+          "pass": "first",
+          "docsSource": "live",
+          "final": {
+            "id": 81,
+            "name": "Stripe",
+            "group": "Finance & Fintech",
+            "hint": "https://stripe.com/docs/api",
+            "oneLiner": "Stripe provides a comprehensive REST API for payment processing, billing, and financial operations with API key and OAuth2 authentication.",
+            "category": "Payments",
+            "auth": [
+              "APIKey",
+              "OAuth2"
+            ],
+            "authPrimary": "APIKey",
+            "selfServe": "self-serve",
+            "selfServeNote": "Self-serve: API keys (test mode sk_test_ and live mode sk_live_/rk_live_) are created and managed directly in the Stripe Dashboard with no paid plan or sales contact required; test mode sandbox is free.",
+            "apiSurface": "Documented public REST API (https://api.stripe.com/v1) with broad resource coverage (charges, customers, subscriptions, invoices, Connect, Issuing, Terminal, Treasury, etc.), official client libraries (Ruby, Python, PHP, Java, Node, Go, .NET), webhooks, and v2 APIs; no native MCP server or agent skills mentioned in fetched docs.",
+            "verdict": "buildable",
+            "blocker": "none",
+            "evidence": "https://stripe.com/docs/api",
+            "composioSupported": true,
+            "composioTools": 425,
+            "composioTriggers": 7,
+            "composioAuth": [
+              "OAUTH2",
+              "API_KEY"
+            ],
+            "pass": "final"
+          }
+        }
+      },
+      "finalPass": {
+        "correct": 4,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": true
+        },
+        "accuracy": 1,
+        "record": {
+          "id": 81,
+          "name": "Stripe",
+          "group": "Finance & Fintech",
+          "hint": "https://stripe.com/docs/api",
+          "oneLiner": "Stripe provides a comprehensive REST API for payment processing, billing, and financial operations with API key and OAuth2 authentication.",
+          "category": "Payments",
+          "auth": [
+            "APIKey",
+            "OAuth2"
+          ],
+          "authPrimary": "APIKey",
+          "selfServe": "self-serve",
+          "selfServeNote": "Self-serve: API keys (test mode sk_test_ and live mode sk_live_/rk_live_) are created and managed directly in the Stripe Dashboard with no paid plan or sales contact required; test mode sandbox is free.",
+          "apiSurface": "Documented public REST API (https://api.stripe.com/v1) with broad resource coverage (charges, customers, subscriptions, invoices, Connect, Issuing, Terminal, Treasury, etc.), official client libraries (Ruby, Python, PHP, Java, Node, Go, .NET), webhooks, and v2 APIs; no native MCP server or agent skills mentioned in fetched docs.",
+          "verdict": "buildable",
+          "blocker": "none",
+          "evidence": "https://stripe.com/docs/api",
+          "composioSupported": true,
+          "composioTools": 425,
+          "composioTriggers": 7,
+          "composioAuth": [
+            "OAUTH2",
+            "API_KEY"
+          ],
+          "pass": "final"
+        }
+      },
+      "improved": false,
+      "composioSupported": true
+    },
+    {
+      "id": 84,
+      "name": "Paygent Connect",
+      "group": "Finance & Fintech",
+      "truth": {
+        "oneLiner": "Paygent provides Japanese payment processing APIs (credit card, convenience store, bank, carrier) for merchants to accept and manage payments.",
+        "auth": [
+          "APIKey"
+        ],
+        "selfServe": "gated",
+        "verdict": "partial",
+        "blocker": "Public docs describe services and API overview but do not expose full self-serve API reference, sandbox signup, or open registration; merchant account and credentials require application/contract with Paygent.",
+        "evidence": "https://www.paygent.co.jp/"
+      },
+      "firstPass": {
+        "correct": 3,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": true,
+          "blocker": false
+        },
+        "accuracy": 0.75,
+        "record": {
+          "id": 84,
+          "name": "Paygent Connect",
+          "group": "Finance & Fintech",
+          "hint": "https://www.paygent.co.jp/",
+          "oneLiner": "Japanese payment processing platform providing online and offline payment gateway services including credit card, convenience store, and bank transfer payments.",
+          "category": "Finance & Fintech",
+          "auth": [
+            "APIKey",
+            "Basic"
+          ],
+          "authPrimary": "APIKey",
+          "selfServe": "gated",
+          "selfServeNote": "Paygent requires merchant contract application and approval to obtain API credentials; not openly self-signup for API access.",
+          "apiSurface": "Documented private/partner REST API available only to contracted merchants; no public open API or existing MCP found.",
+          "verdict": "partial",
+          "blocker": "API access requires approved merchant contract; no public self-serve API documentation or sandbox openly available",
+          "evidence": "https://www.paygent.co.jp/",
+          "composioSupported": false,
+          "composioTools": null,
+          "composioTriggers": null,
+          "composioAuth": null,
+          "pass": "first",
+          "docsSource": "live",
+          "final": {
+            "id": 84,
+            "name": "Paygent Connect",
+            "group": "Finance & Fintech",
+            "hint": "https://www.paygent.co.jp/",
+            "oneLiner": "Paygent is a Japanese payment processing provider offering card, bank, carrier, convenience store, and B2B settlement services for e-commerce merchants.",
+            "category": "Payments",
+            "auth": [
+              "Other"
+            ],
+            "authPrimary": "Other",
+            "selfServe": "gated",
+            "selfServeNote": "No self-serve signup or developer account; site only offers '資料請求' (document request) and 'お問い合わせ' (contact/inquiry) via web form or phone (03-6327-2862), indicating a sales/contact-gated merchant onboarding process with no public free/trial tier.",
+            "apiSurface": "No public REST/GraphQL API documentation, auth specs, or MCP/agent skills found on the provided docs page; only marketing, case studies, and contact paths are present.",
+            "verdict": "blocked",
+            "blocker": "No publicly documented developer API or self-serve access; all integration requires contact-sales/partner gating with no visible technical docs.",
+            "evidence": "https://www.paygent.co.jp/",
+            "composioSupported": false,
+            "composioTools": null,
+            "composioTriggers": null,
+            "composioAuth": null,
+            "pass": "final"
+          }
+        }
+      },
+      "finalPass": {
+        "correct": 1,
+        "total": 4,
+        "perField": {
+          "auth": false,
+          "selfServe": true,
+          "verdict": false,
+          "blocker": false
+        },
+        "accuracy": 0.25,
+        "record": {
+          "id": 84,
+          "name": "Paygent Connect",
+          "group": "Finance & Fintech",
+          "hint": "https://www.paygent.co.jp/",
+          "oneLiner": "Paygent is a Japanese payment processing provider offering card, bank, carrier, convenience store, and B2B settlement services for e-commerce merchants.",
+          "category": "Payments",
+          "auth": [
+            "Other"
+          ],
+          "authPrimary": "Other",
+          "selfServe": "gated",
+          "selfServeNote": "No self-serve signup or developer account; site only offers '資料請求' (document request) and 'お問い合わせ' (contact/inquiry) via web form or phone (03-6327-2862), indicating a sales/contact-gated merchant onboarding process with no public free/trial tier.",
+          "apiSurface": "No public REST/GraphQL API documentation, auth specs, or MCP/agent skills found on the provided docs page; only marketing, case studies, and contact paths are present.",
+          "verdict": "blocked",
+          "blocker": "No publicly documented developer API or self-serve access; all integration requires contact-sales/partner gating with no visible technical docs.",
+          "evidence": "https://www.paygent.co.jp/",
+          "composioSupported": false,
+          "composioTools": null,
+          "composioTriggers": null,
+          "composioAuth": null,
+          "pass": "final"
+        }
+      },
+      "improved": false,
+      "composioSupported": false
+    },
+    {
+      "id": 91,
+      "name": "NotebookLM",
+      "group": "AI, Research & Media",
+      "truth": {
+        "oneLiner": "NotebookLM is not documented at the provided URL; the page covers the Gemini API on Google Cloud, not NotebookLM's developer interface.",
+        "auth": [
+          "APIKey",
+          "OAuth2"
+        ],
+        "selfServe": "self-serve",
+        "verdict": "blocked",
+        "blocker": "The provided developer docs (cloud.google.com/gemini) describe the Gemini API, not NotebookLM. No NotebookLM API, endpoints, or auth specifics are present, so the app cannot be assessed or built from these docs.",
+        "evidence": "https://cloud.google.com/gemini"
+      },
+      "firstPass": {
+        "correct": 2,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": false,
+          "verdict": true,
+          "blocker": false
+        },
+        "accuracy": 0.5,
+        "record": {
+          "id": 91,
+          "name": "NotebookLM",
+          "group": "AI, Research & Media",
+          "hint": "https://cloud.google.com/gemini",
+          "oneLiner": "NotebookLM is a Google AI tool that turns user-provided documents into a conversational research and summarization assistant.",
+          "category": "AI, Research & Media",
+          "auth": [
+            "OAuth2"
+          ],
+          "authPrimary": "OAuth2",
+          "selfServe": "gated",
+          "selfServeNote": "NotebookLM is a consumer Google product without a publicly self-serve developer API; access is controlled by Google and not openly registrable for third-party API use.",
+          "apiSurface": "No documented public REST/GraphQL API or MCP for NotebookLM; only web UI exists. The hint URL points to Gemini/Google Cloud which is separate and has its own APIs.",
+          "verdict": "blocked",
+          "blocker": "No public API or developer program for NotebookLM; cannot build agent toolkit without undocumented/internal access.",
+          "evidence": "https://cloud.google.com/gemini",
+          "composioSupported": false,
+          "composioTools": null,
+          "composioTriggers": null,
+          "composioAuth": null,
+          "pass": "first",
+          "docsSource": "live",
+          "final": {
+            "id": 91,
+            "name": "NotebookLM",
+            "group": "AI, Research & Media",
+            "hint": "https://cloud.google.com/gemini",
+            "oneLiner": "NotebookLM is Google's AI research and note-based synthesis assistant (not documented at the Gemini cloud page, which covers Gemini models/APIs and enterprise agents).",
+            "category": "AIResearch",
+            "auth": [
+              "Other"
+            ],
+            "authPrimary": "Other",
+            "selfServe": "gated",
+            "selfServeNote": "No NotebookLM developer access, API, or self-serve tier documented at the provided Gemini docs URL; only Gemini Developer API (no-cost key) and enterprise/partner programs are described, so NotebookLM build access is undocumented/gated.",
+            "apiSurface": "No public REST/GraphQL API, MCP server, or agent skills for NotebookLM found in the retrieved Gemini docs; page documents Gemini Developer API, Agent Platform, and Workspace/Gemini enterprise apps only.",
+            "verdict": "blocked",
+            "blocker": "No public developer documentation or API surface for NotebookLM at the hint URL; cannot build an agent toolkit without documented programmatic access.",
+            "evidence": "https://cloud.google.com/gemini",
+            "composioSupported": false,
+            "composioTools": null,
+            "composioTriggers": null,
+            "composioAuth": null,
+            "pass": "final"
+          }
+        }
+      },
+      "finalPass": {
+        "correct": 1,
+        "total": 4,
+        "perField": {
+          "auth": false,
+          "selfServe": false,
+          "verdict": true,
+          "blocker": false
+        },
+        "accuracy": 0.25,
+        "record": {
+          "id": 91,
+          "name": "NotebookLM",
+          "group": "AI, Research & Media",
+          "hint": "https://cloud.google.com/gemini",
+          "oneLiner": "NotebookLM is Google's AI research and note-based synthesis assistant (not documented at the Gemini cloud page, which covers Gemini models/APIs and enterprise agents).",
+          "category": "AIResearch",
+          "auth": [
+            "Other"
+          ],
+          "authPrimary": "Other",
+          "selfServe": "gated",
+          "selfServeNote": "No NotebookLM developer access, API, or self-serve tier documented at the provided Gemini docs URL; only Gemini Developer API (no-cost key) and enterprise/partner programs are described, so NotebookLM build access is undocumented/gated.",
+          "apiSurface": "No public REST/GraphQL API, MCP server, or agent skills for NotebookLM found in the retrieved Gemini docs; page documents Gemini Developer API, Agent Platform, and Workspace/Gemini enterprise apps only.",
+          "verdict": "blocked",
+          "blocker": "No public developer documentation or API surface for NotebookLM at the hint URL; cannot build an agent toolkit without documented programmatic access.",
+          "evidence": "https://cloud.google.com/gemini",
+          "composioSupported": false,
+          "composioTools": null,
+          "composioTriggers": null,
+          "composioAuth": null,
+          "pass": "final"
+        }
+      },
+      "improved": false,
+      "composioSupported": false
+    },
+    {
+      "id": 98,
+      "name": "Mermaid CLI",
+      "group": "AI, Research & Media",
+      "truth": {
+        "oneLiner": "Mermaid CLI (mmdc) is a Node.js command-line tool that renders Mermaid diagrams to SVG/PNG/PDF from the terminal or scripts, not a hosted HTTP API.",
+        "auth": [
+          "Other"
+        ],
+        "selfServe": "self-serve",
+        "verdict": "blocked",
+        "blocker": "No public HTTP API or remote service endpoints are documented; it is a local CLI executable requiring installation via npm and run locally, so it cannot be wrapped as a remote agent toolkit API from the docs.",
+        "evidence": "https://github.com/mermaid-js/mermaid-cli"
+      },
+      "firstPass": {
+        "correct": 2,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": false,
+          "blocker": false
+        },
+        "accuracy": 0.5,
+        "record": {
+          "id": 98,
+          "name": "Mermaid CLI",
+          "group": "AI, Research & Media",
+          "hint": "https://github.com/mermaid-js/mermaid-cli",
+          "oneLiner": "Command-line tool to render Mermaid diagrams (markdown-like syntax) to SVG/PNG/PDF via Puppeteer.",
+          "category": "AI, Research & Media",
+          "auth": [
+            "Other"
+          ],
+          "authPrimary": "Other",
+          "selfServe": "self-serve",
+          "selfServeNote": "Open-source CLI distributed via npm, no account or approval needed to install and run locally.",
+          "apiSurface": "No hosted REST/GraphQL API; it is a local Node.js CLI (mmdc) with documented flags and config; no existing MCP server in repo.",
+          "verdict": "partial",
+          "blocker": "No remote API or auth; would need a wrapper service or local execution bridge to expose as an agent tool.",
+          "evidence": "https://github.com/mermaid-js/mermaid-cli",
+          "composioSupported": false,
+          "composioTools": null,
+          "composioTriggers": null,
+          "composioAuth": null,
+          "pass": "first",
+          "docsSource": "live",
+          "final": {
+            "id": 98,
+            "name": "Mermaid CLI",
+            "group": "AI, Research & Media",
+            "hint": "https://github.com/mermaid-js/mermaid-cli",
+            "oneLiner": "Mermaid CLI (mmdc) is an open-source command-line tool that converts Mermaid diagram definition files into SVG, PNG, or PDF output.",
+            "category": "Diagramming",
+            "auth": [
+              "Other"
+            ],
+            "authPrimary": "Other",
+            "selfServe": "self-serve",
+            "selfServeNote": "Fully open-source and self-serve via npm install -g @mermaid-js/mermaid-cli or Docker pull; no account, tier, or payment required (MIT-licensed, public GitHub repo).",
+            "apiSurface": "No REST/GraphQL API; it is a local CLI executable (mmdc) with stdin/file input and SVG/PNG/PDF output. No documented MCP server or agent skills; only a Node.js CLI and Docker image.",
+            "verdict": "partial",
+            "blocker": "No network-accessible API surface (only local CLI/Docker); requires process execution or container wrapping rather than standard HTTP API integration for agent toolkit.",
+            "evidence": "https://github.com/mermaid-js/mermaid-cli (README.md: 'This is a command-line interface (CLI) for mermaid. It takes a mermaid definition file as input and generates an SVG/PNG/PDF file as output.'; install via npm/Docker; usage mmdc -i input.mmd -o output.svg)",
+            "composioSupported": false,
+            "composioTools": null,
+            "composioTriggers": null,
+            "composioAuth": null,
+            "pass": "final"
+          }
+        }
+      },
+      "finalPass": {
+        "correct": 2,
+        "total": 4,
+        "perField": {
+          "auth": true,
+          "selfServe": true,
+          "verdict": false,
+          "blocker": false
+        },
+        "accuracy": 0.5,
+        "record": {
+          "id": 98,
+          "name": "Mermaid CLI",
+          "group": "AI, Research & Media",
+          "hint": "https://github.com/mermaid-js/mermaid-cli",
+          "oneLiner": "Mermaid CLI (mmdc) is an open-source command-line tool that converts Mermaid diagram definition files into SVG, PNG, or PDF output.",
+          "category": "Diagramming",
+          "auth": [
+            "Other"
+          ],
+          "authPrimary": "Other",
+          "selfServe": "self-serve",
+          "selfServeNote": "Fully open-source and self-serve via npm install -g @mermaid-js/mermaid-cli or Docker pull; no account, tier, or payment required (MIT-licensed, public GitHub repo).",
+          "apiSurface": "No REST/GraphQL API; it is a local CLI executable (mmdc) with stdin/file input and SVG/PNG/PDF output. No documented MCP server or agent skills; only a Node.js CLI and Docker image.",
+          "verdict": "partial",
+          "blocker": "No network-accessible API surface (only local CLI/Docker); requires process execution or container wrapping rather than standard HTTP API integration for agent toolkit.",
+          "evidence": "https://github.com/mermaid-js/mermaid-cli (README.md: 'This is a command-line interface (CLI) for mermaid. It takes a mermaid definition file as input and generates an SVG/PNG/PDF file as output.'; install via npm/Docker; usage mmdc -i input.mmd -o output.svg)",
+          "composioSupported": false,
+          "composioTools": null,
+          "composioTriggers": null,
+          "composioAuth": null,
+          "pass": "final"
+        }
+      },
+      "improved": false,
+      "composioSupported": false
+    }
+  ]
+}
